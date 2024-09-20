@@ -1,13 +1,13 @@
 import Footer from "@/components/common/Footer/page";
 import Header from "@/components/common/Header/page";
 import NextImg from "@/components/common/next-img";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/free-mode";
+// import "swiper/css/pagination";
 
-import { FreeMode, Pagination } from "swiper/modules";
+// import { FreeMode, Pagination } from "swiper/modules";
 
 export default function Home() {
   return (
@@ -403,7 +403,7 @@ export default function Home() {
               </span>
               . Lorem Ipsum has been&nbsp;
               <span className="font-medium text-[#333]">
-                the industry's standard dummy text ever since the 1500s
+                the industry&apos;s standard dummy text ever since the 1500s
               </span>
             </p>
           </div>
@@ -451,7 +451,7 @@ export default function Home() {
                   </p>
                   <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
+                    typesetting industry. Lorem Ipsum has been the industry&apos;s
                     standard dummy text ever since the 1500s
                   </p>
                   <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-[136px]">
@@ -472,7 +472,7 @@ export default function Home() {
                   </p>
                   <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
+                    typesetting industry. Lorem Ipsum has been the industry&apos;s
                     standard dummy text ever since the 1500s
                   </p>
                   <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-[53px]">
@@ -495,7 +495,7 @@ export default function Home() {
                   </p>
                   <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
+                    typesetting industry. Lorem Ipsum has been the industry&apos;s
                     standard dummy text ever since the 1500s
                   </p>
                   <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-[136px]">
@@ -516,7 +516,7 @@ export default function Home() {
                   </p>
                   <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
+                    typesetting industry. Lorem Ipsum has been the industry&apos;s
                     standard dummy text ever since the 1500s
                   </p>
                   <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-[53px]">
@@ -555,7 +555,7 @@ export default function Home() {
               </span>
               . Lorem Ipsum has been&nbsp;
               <span className="font-medium text-[#333]">
-                the industry's standard dummy text ever since the 1500s
+                the industry&apos;s standard dummy text ever since the 1500s
               </span>
             </p>
           </div>
