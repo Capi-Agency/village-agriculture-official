@@ -21,7 +21,7 @@ export default function Home() {
         </p>
         <div className="absolute left-[10%] top-[60%] flex flex-col gap-[15px]">
           <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#FFF]">
-            // Farmers by Heart
+            &#47;&#47; Farmers by Heart
           </span>
           <span className="text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#FFF] pl-[109px]">
             Stewards by Choise.
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="grid grid-cols-2 mt-[89px]">
             <div className="flex flex-col gap-[15px]">
               <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
-                // Farmers by Heart
+                &#47;&#47; Farmers by Heart
               </span>
               <span className="text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#545454] pl-[109px]">
                 Stewards by Choise.
@@ -261,7 +261,7 @@ export default function Home() {
           <div className="flex flex-col gap-10 items-end">
             <p className="flex flex-col gap-[15px]">
               <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
-                // Farmers by Heart
+                &#47;&#47; Farmers by Heart
               </span>
               <span className="text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#333] pl-[109px]">
                 Stewards by Choise.
@@ -295,7 +295,7 @@ export default function Home() {
         </div>
         <div className="flex items-center justify-between mt-[103px]">
           <p className="text-[32px] -tracking-[0.96px]  leading-[32px] text-left text-[#545454]">
-            // All
+            &#47;&#47; All
           </p>
           <h1 className="text-[64px] font-bold leading-[64px] -tracking-[1.92px] text-[#333] flex-grow text-center">
             Sustainable Farming 101
@@ -341,7 +341,7 @@ export default function Home() {
         <div className="mt-[104px] grid grid-cols-[30%,55%] items-center justify-between">
           <div className="flex flex-col gap-[15px]">
             <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
-              // Farmers by Heart
+              &#47;&#47; Farmers by Heart
             </span>
             <span className="text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#333] pl-[109px]">
               Stewards by Choise.
@@ -389,24 +389,24 @@ export default function Home() {
             <div className="relative">
               <ul className="flex flex-col gap-8 absolute top-24 left-0">
                 <li className="text-[32px] -tracking-[0.96px]  leading-[32px] text-[#545454]">
-                  // All
+                  &#47;&#47; All
                 </li>
                 <li className="text-[32px] -tracking-[0.96px]  leading-[32px] text-[#545454]">
-                  // New
+                  &#47;&#47; New
                 </li>
                 <li className="text-[32px] -tracking-[0.96px]  leading-[32px] text-[#545454]">
-                  // Tranding
+                  &#47;&#47; Tranding
                 </li>
                 <li className="text-[32px] -tracking-[0.96px]  leading-[32px] text-[#545454]">
-                  // Organic Farming
+                  &#47;&#47; Organic Farming
                 </li>
                 <li className="text-[32px] -tracking-[0.96px]  leading-[32px] text-[#545454]">
-                  // Vertical Farming
+                  &#47;&#47; Vertical Farming
                 </li>
               </ul>
               <div className="flex flex-col text-right absolute bottom-0 left-0">
                 <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
-                  // Nourishing the Land
+                  &#47;&#47; Nourishing the Land
                 </span>
                 <span className="text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#545454]">
                   Cultivating Communities
@@ -547,7 +547,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col text-right justify-end mt-[91px]">
             <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
-              // Sustainable Arigculture,
+              &#47;&#47; Sustainable Arigculture,
             </span>
             <span className="text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#545454]">
               Shared Values.
@@ -644,7 +644,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col text-right float-start">
             <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
-              // Cultivating Dreams,
+              &#47;&#47; Cultivating Dreams,
             </span>
             <span className="text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#545454]">
               Showing Success.
