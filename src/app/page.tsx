@@ -59,48 +59,66 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <section className="relative container mt-[117px]">
-        <div className="relative w-full h-[1012px]">
-          <NextImg
-            src="/assets/image/Rectangle 171.png"
-            alt="Village-agriculture"
-            objectFit="cover"
-            className="rounded-lg"
-          />
-        </div>
-        <p className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[53%] flex items-center justify-center text-[72px] font-bold -tracking-[2.16px] text-white mx-auto text-center leading-[84px]">
-          Discover the Cutting - Edge World of Modern Agriculture
-        </p>
-        <div className="absolute left-[10%] top-[60%] flex flex-col gap-[15px]">
-          <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#FFF]">
-            &#47;&#47; Farmers by Heart
-          </span>
-          <span className="text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#FFF] pl-[109px]">
-            Stewards by Choise.
-          </span>
-        </div>
-        <div className="h-[2px] w-[90%] border border-white absolute bottom-[19%]"></div>
-        <div className="absolute bottom-20 left-[10%] right-[10%]">
-          <div className="flex item-center justify-between">
-            <div className="flex items-center gap-14">
-              <span className="text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
-                [ Organic Farming ]
-              </span>
-              <span className="text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
-                [ Food & Beverage ]
-              </span>
-            </div>
-            <div className="flex items-center gap-4">
-              <span className="text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
-                [ Farming ]
-              </span>
-              <span className="text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
-                [ Global Agriculture ]
-              </span>
+
+
+      {/* Begin: banner */}
+      <section className="container  2xl:mt-[117px]">
+        <div className="relative">
+          <div className="relative w-full pt-[80%]">
+            <NextImg
+              src="/assets/image/Rectangle 171.png"
+              alt="Village-agriculture"
+              objectFit="cover"
+              className="absolute top-0 left-0 rounded-lg"
+            />
+          </div>
+
+
+          <p className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[55%] flex items-center justify-center text-2xl 2xl:text-[72px] font-bold -tracking-[2.16px] text-white mx-auto text-center 2xl:leading-[1.15]">
+            Discover the Cutting - Edge World of Modern Agriculture
+          </p>
+
+          <div className="absolute left-0 top-[60%] px-12 flex flex-col gap-[15px]">
+            <span className="text-xs 2xl:text-[32px] -tracking-[0.96px] leading-[32px] text-[#FFF]">
+              &#47;&#47; Farmers by Heart
+            </span>
+            <span className="text-xs 2xl:text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#FFF] pl-[109px]">
+              Stewards by Choise.
+            </span>
+          </div>
+
+          <div className="h-[2px] w-[90%]  absolute bottom-[19%]"></div>
+
+
+          <div className="absolute bottom-0 left-0 right-0 border-t-[2px] border-white">
+            <div className="flex item-center justify-between px-12 py-20">
+
+              <div className="flex items-center gap-14">
+                <span className="text-[10px] 2xl:text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
+                  [ Organic Farming ]
+                </span>
+                <span className="text-[10px] 2xl:text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
+                  [ Food & Beverage ]
+                </span>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <span className="text-[10px] 2xl:text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
+                  [ Farming ]
+                </span>
+                <span className="text-[10px] 2xl:text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
+                  [ Global Agriculture ]
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+
+
+
+
       <section className="mt-[106px]">
         <div className="container">
           <div className="flex items-center justify-between">
@@ -112,6 +130,7 @@ export default function Home() {
                 Year of Experiences
               </span>
             </div>
+            
             <div className="flex flex-col gap-8">
               <span className="leading-[64px] -tracking-[1,92px] font-medium text-[64px] text-[#333]">
                 190+
@@ -137,6 +156,7 @@ export default function Home() {
               </span>
             </div>
           </div>
+
           <div className="grid grid-cols-2 mt-[89px]">
             <div className="flex flex-col gap-[15px]">
               <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
@@ -154,6 +174,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* End: banner */}
+
+
+
       <section>
         <div className="container">
           <h1 className="text-[64px] font-bold leading-[64px] -tracking-[1.92px] text-[#333] mt-[38px]">

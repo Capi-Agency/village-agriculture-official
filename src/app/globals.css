@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 .container{
-    @apply px-20;
+    @apply 2xl:px-20;
 }

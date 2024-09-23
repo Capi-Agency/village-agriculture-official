@@ -7,11 +7,11 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      "2xl": "1440px",
+    },
     container: {
 			center: true,
-			screens: {
-				"2xl": "1440px",
-			},
 		},
     extend: {
       colors: {
