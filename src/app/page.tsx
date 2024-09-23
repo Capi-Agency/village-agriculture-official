@@ -7,8 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import CSS của Swiper
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 export default function Home() {
   const slides = [
