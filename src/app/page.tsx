@@ -559,32 +559,32 @@ export default function Home() {
       </section>
       <section className="container mt-120px">
         <div className="flex items-center justify-between mt-[136px]">
-          <span className="text-[32px] -tracking-[1px] text-[#545454]">
-            Blog
+          <span className="text-[24px] md:text-[32px] -tracking-[1px] font-medium text-[#545454]">
+            Blog 
           </span>
-          <div className="border border-[#333] h-[1px] w-[200px]"></div>
-          <div className="relative w-[275px] h-[36px]">
+          <div className="border border-[#333] h-[1px] w-[91px] md:w-[200px]"></div>
+          <div className="relative w-[183px] md:w-[275px] h-6 md:h-[36px]">
             <NextImg
               src="/assets/icon/HorizontalLogo.svg"
               alt="BannerHeader"
               objectFit="cover"
             />
           </div>
-          <div className="border border-[#333] h-[1px] w-[255px]"></div>
-          <span className="text-[32px] -tracking-[1px] text-[#545454] leading-[140%]">
+          <div className="border border-[#333] h-[1px] w-[255px] md:block hidden"></div>
+          <span className="text-[32px] -tracking-[1px] text-[#545454] leading-[140%] md:block hidden">
             © 2024
           </span>
         </div>
-        <div className="flex items-center justify-between mt-[103px]">
-          <p className="text-[32px] -tracking-[0.96px]  leading-[32px] text-left text-[#545454]">
+        <div className="flex items-center justify-between mt-[50px] md:mt-[103px]">
+          <p className="text-[32px] -tracking-[0.96px]  leading-[32px] text-left text-[#545454] md:block hidden">
             &#47;&#47; All
           </p>
-          <h1 className="text-[64px] font-bold leading-[64px] -tracking-[1.92px] text-[#333] flex-grow text-center">
+          <h1 className="text-[36px] md:text-[64px] font-bold leading-[64px] -tracking-[1.92px] text-[#333] flex-grow md:text-center">
             Sustainable Farming 101
           </h1>
         </div>
-        <div className="mt-[116px] relative">
-          <div className="relative w-full h-[720px]">
+        <div className="mt-10 md:mt-[116px] relative">
+          <div className="relative w-full md:h-[720px] h-[553px]">
             <NextImg
               src="/assets/image/Rectangle 166.png"
               alt="Village-agriculture"
@@ -593,30 +593,30 @@ export default function Home() {
             />
           </div>
           <div className="absolute inset-0 bg-[rgba(23,23,23,0.50)] h-full rounded-lg"></div>
-          <h2 className="text-[64px] font-medium leading-[64px] -tracking-[1.92px] text-[#FFF] absolute top-[104px] left-[84px] w-[70%]">
+          <h2 className="md:text-[64px] text-[24px] font-medium leading-[32px] md:leading-[64px] md:-tracking-[1.92px] -tracking-[0.72px] text-[#FFF] absolute md:top-[104px] md:left-[84px] top-10 left-8 w-[90%] md:w-[70%]">
             The Sustainable Agriculture Innovation and Practices Symposium
           </h2>
-          <p className="flex flex-col gap-8 items-end absolute top-[104px] right-[111px]">
-            <span className="text-[48px] font-medium leading-none -tracking-[1.44px] text-[#FFF] underline">
+          <p className="flex flex-col gap-8 items-end absolute md:top-[118px] top-[50%] -translate-y-1/2 md:-translate-y-0 right-7 tran md:right-[111px]">
+            <span className="md:text-[48px] text-[24px] font-medium leading-none -tracking-[1.44px] text-[#FFF] underline">
               Jan 2024
             </span>
-            <span className="text-[24px] font-medium leading-none -tracking-[0.72px] text-[#FFF]">
+            <span className="md:text-[24px] text-[16px] font-medium leading-none -tracking-[0.72px] text-[#FFF]">
               Feb 2024
             </span>
-            <span className="text-[24px] font-medium leading-none -tracking-[0.72px] text-[#FFF]">
+            <span className="md:text-[24px] text-[16px] font-medium leading-none -tracking-[0.72px] text-[#FFF]">
               Mar 2024
             </span>
-            <span className="text-[24px] font-medium leading-none -tracking-[0.72px] text-[#FFF]">
+            <span className="md:text-[24px] text-[16px] font-medium leading-none -tracking-[0.72px] text-[#FFF]">
               Apr 2024
             </span>
-            <span className="text-[24px] font-medium leading-none -tracking-[0.72px] text-[#FFF]">
+            <span className="md:text-[24px] text-[16px] font-medium leading-none -tracking-[0.72px] text-[#FFF]">
               May 2024
             </span>
-            <span className="text-[24px] font-medium leading-none -tracking-[0.72px] text-[#FFF]">
+            <span className="md:text-[24px] text-[16px] font-medium leading-none -tracking-[0.72px] text-[#FFF]">
               Jun 2024
             </span>
           </p>
-          <button className="px-[56px] py-2 bg-[#FFF] text-[#333] text-[18px] font-semibold -tracking-[0.54px] leading-[48px] absolute left-[76px] bottom-[105px] rounded-full">
+          <button className="px-7 md:px-[56px] py-3 md:py-4 bg-[#FFF] text-[#333] text-[18px] font-semibold -tracking-[0.54px]  absolute left-[50%] -translate-x-1/2 md:-translate-x-0 md:left-[76px] bottom-10 md:bottom-[105px] rounded-full">
             Join Now
           </button>
         </div>

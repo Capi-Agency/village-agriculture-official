@@ -6,4 +6,5 @@
 
 .container{
     @apply px-5 2xl:px-20;
+    @apply xl:px-20 px-4;
 }
