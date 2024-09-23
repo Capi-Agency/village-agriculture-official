@@ -4,7 +4,6 @@ import Footer from "@/components/common/Footer/page";
 import Header from "@/components/common/Header/page";
 import NextImg from "@/components/common/next-img";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
 import CustomSwiper from "../components/Swiper/CustomSwiper";
 
 // Import CSS của Swiper
@@ -55,7 +54,7 @@ export default function Home() {
       description:
         "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
       imageUrl: "/assets/image/Frame 1261154503.png",
-    }
+    },
   ];
   return (
     <div>
@@ -191,10 +190,8 @@ export default function Home() {
           </div>
           <div className="mt-[60px]">
             <Swiper
-              modules={[Navigation, Pagination]}
               spaceBetween={30}
               slidesPerView={3}
-              navigation
               grabCursor={true}
               loop={false}
               onInit={(swiper) => {
@@ -208,6 +205,12 @@ export default function Home() {
                     ((swiper.activeIndex + 1) / totalSlides) * 100;
                   progressBar.style.width = `${percentage}%`;
                 }
+                document
+                  .getElementById("prevBtn")
+                  ?.addEventListener("click", () => swiper.slidePrev());
+                document
+                  .getElementById("nextBtn")
+                  ?.addEventListener("click", () => swiper.slideNext());
               }}
               onSlideChange={(swiper) => {
                 const progressBar = document.getElementById(
@@ -266,9 +269,33 @@ export default function Home() {
             </Swiper>
 
             {/* Custom Progress Bar */}
-            <div className="progress-container mt-[65px]">
-              <div className="w-[20%] h-[15px] overflow-hidden border border-[#333]">
-                <div id="custom-progress-bar" className="progress-bar"></div>
+            <div className="mt-[65px] flex justify-center items-center">
+              <div className="w-[300px] h-[15px] overflow-hidden border border-[#333]">
+                <div
+                  id="custom-progress-bar"
+                  className="w-0 h-full bg-[#545454] transition ease-in duration-300"
+                ></div>
+              </div>
+              {/* Nút điều hướng tùy chỉnh */}
+              <div className="custom-navigation ml-[80px] flex items-center gap-6">
+                <button id="prevBtn" className="rounded-full bg-black p-4">
+                  <div className="relative w-6 h-6">
+                    <NextImg
+                      src="/assets/icon/arrow_forward.svg"
+                      alt="Village-agriculture"
+                      objectFit="cover"
+                    />
+                  </div>
+                </button>
+                <button id="nextBtn" className="rounded-full bg-black p-4">
+                  <div className="relative w-6 h-6 rotate-180">
+                    <NextImg
+                      src="/assets/icon/arrow_forward.svg"
+                      alt="Village-agriculture"
+                      objectFit="cover"
+                    />
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -409,7 +436,87 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <CustomSwiper />
+
+        {/* Slide 2 */}
+        <div className="mt-[50px]">
+          <div className="grid grid-cols-2 gap-5">
+            <div className="relative w-full h-[598px] rounded-lg">
+              <NextImg
+                src="/assets/image/Rectangle 167.png"
+                alt="Village-agriculture"
+                objectFit="cover"
+                className="rounded-lg"
+              />
+            </div>
+            <div className="flex flex-col gap-[90px]">
+              <div className="grid grid-cols-2 items-center gap-3">
+                <div className="relative w-full h-[290px] rounded-lg">
+                  <NextImg
+                    src="/assets/image/Rectangle 168.png"
+                    alt="Village-agriculture"
+                    objectFit="cover"
+                    className="rounded-lg"
+                  />
+                </div>
+                <div className="relative w-full h-[290px] rounded-lg">
+                  <NextImg
+                    src="/assets/image/Rectangle 169.png"
+                    alt="Village-agriculture"
+                    objectFit="cover"
+                    className="rounded-lg"
+                  />
+                </div>
+              </div>
+              <div className="flex justify-between ml-[30%]">
+                <span className="text-[32px] -tracking-[0.96px] text-[#333] leading-[32px]">Prev</span>
+                <div className="bg-[#D9D9D9] w-[148px] h-[10px] place-self-end mb-2"></div>
+                <div className="flex items-center gap-3 place-self-end">
+                  <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">01</span>
+                  <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">02</span>
+                  <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">03</span>
+                  <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">04</span>
+                </div>
+                <span className="text-[32px] -tracking-[0.96px] text-[#333] leading-[32px]">Next</span>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 justify-between">
+            <div className="flex items-center justify-between">
+              <div className="flex flex-col gap-1 place-self-end">
+                <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
+                  Year
+                </span>
+                <span className="text-base font-bold -tracking-[0.48px] text-[#545454]">
+                  &#47;&#47; 2024
+                </span>
+              </div>
+              <div className="flex flex-col gap-1 place-self-end">
+                <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
+                  Category
+                </span>
+                <span className="text-base font-bold -tracking-[0.48px] text-[#545454]">
+                  &#47;&#47; 2024
+                </span>
+              </div>
+              <div className="flex flex-col gap-1 place-self-end">
+                <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
+                  Company
+                </span>
+                <span className="text-base font-bold -tracking-[0.48px] text-[#545454]">
+                  &#47;&#47; VILLAGE AGRICULTURE
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-col text-right">
+              <span className="text-[64px] -tracking-[1.92px] leading-[64px] text-[#545454]">
+                Portfolio
+              </span>
+              <span className="text-[64px] font-medium -tracking-[1.92px] leading-[64px] text-[#545454]">
+                &#47;&#47; 2024
+              </span>
+            </div>
+          </div>
+        </div>
       </section>
       <section className="container mt-120px">
         <div className="flex items-center justify-between mt-[136px]">
