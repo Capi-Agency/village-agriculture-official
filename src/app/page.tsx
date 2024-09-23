@@ -4,7 +4,6 @@ import Footer from "@/components/common/Footer/page";
 import Header from "@/components/common/Header/page";
 import NextImg from "@/components/common/next-img";
 import { Swiper, SwiperSlide } from "swiper/react";
-import CustomSwiper from "../components/Swiper/CustomSwiper";
 
 // Import CSS của Swiper
 import "swiper/css";
@@ -62,7 +61,7 @@ export default function Home() {
 
 
       {/* Begin: banner */}
-      <section className="container  2xl:mt-[117px]">
+      <section className="container 2xl:mt-[117px]">
         <div className="relative">
           <div className="relative w-full pt-[80%]">
             <NextImg
@@ -74,15 +73,15 @@ export default function Home() {
           </div>
 
 
-          <p className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[55%] flex items-center justify-center text-2xl 2xl:text-[72px] font-bold -tracking-[2.16px] text-white mx-auto text-center 2xl:leading-[1.15]">
+          <p className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[55%] flex items-center justify-center text-2xl 2xl:text-[72px] font-bold -tracking-wide text-white mx-auto text-center 2xl:leading-[1.15]">
             Discover the Cutting - Edge World of Modern Agriculture
           </p>
 
-          <div className="absolute left-0 top-[60%] px-12 flex flex-col gap-[15px]">
-            <span className="text-xs 2xl:text-[32px] -tracking-[0.96px] leading-[32px] text-[#FFF]">
+          <div className="absolute left-0 top-[60%] px-5 2xl:px-12 flex flex-col">
+            <span className="text-xs 2xl:text-[32px] 2xl:leading-normal text-[#FFF]">
               &#47;&#47; Farmers by Heart
             </span>
-            <span className="text-xs 2xl:text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#FFF] pl-[109px]">
+            <span className="text-xs 2xl:text-[32px] 2xl:leading-normal font-medium text-[#FFF] pl-[40px] 2xl:pl-[109px]">
               Stewards by Choise.
             </span>
           </div>
@@ -90,23 +89,23 @@ export default function Home() {
           <div className="h-[2px] w-[90%]  absolute bottom-[19%]"></div>
 
 
-          <div className="absolute bottom-0 left-0 right-0 border-t-[2px] border-white">
-            <div className="flex item-center justify-between px-12 py-20">
+          <div className="absolute bottom-0 left-0 right-0 border-t-[1px] 2xl:border-t-[2px] border-white mx-5 2xl:mx-0">
+            <div className="flex flex-col 2xl:flex-row item-center justify-between gap-2 px-0 2xl:px-12 py-4 2xl:py-20 text-white">
 
-              <div className="flex items-center gap-14">
-                <span className="text-[10px] 2xl:text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
+              <div className="flex items-center gap-1 2xl:gap-14">
+                <span className="text-[10px] 2xl:text-[24px] font-[400]">
                   [ Organic Farming ]
                 </span>
-                <span className="text-[10px] 2xl:text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
+                <span className="text-[10px] 2xl:text-[24px]">
                   [ Food & Beverage ]
                 </span>
               </div>
 
-              <div className="flex items-center gap-4">
-                <span className="text-[10px] 2xl:text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
+              <div className="flex items-center gap-1 2xl:gap-4">
+                <span className="text-[10px] 2xl:text-[24px]">
                   [ Farming ]
                 </span>
-                <span className="text-[10px] 2xl:text-[24px] -tracking-[0.72px] leading-[32px] text-[#FFF]">
+                <span className="text-[10px] 2xl:text-[24px]">
                   [ Global Agriculture ]
                 </span>
               </div>
@@ -119,54 +118,57 @@ export default function Home() {
 
 
 
-      <section className="mt-[106px]">
+      <section className="mt-[70px] 2xl:mt-[100px]">
         <div className="container">
-          <div className="flex items-center justify-between">
-            <div className="flex flex-col gap-8">
-              <span className="leading-[64px] -tracking-[1,92px] font-medium text-[64px] text-[#333]">
+          <div className="flex flex-col 2xl:flex-row items-center justify-between gap-[48px] 2xl:gap-0">
+
+            <div className="flex flex-col items-center 2xl:items-start 2xl:gap-4">
+              <span className="font-medium text-[40px] 2xl:text-[64px] text-[#333]">
                 40+
               </span>
-              <span className="text-[#545454] leading-[32px] text-2xl">
+              <span className="text-[#545454] text-2xl">
                 Year of Experiences
               </span>
             </div>
-            
-            <div className="flex flex-col gap-8">
-              <span className="leading-[64px] -tracking-[1,92px] font-medium text-[64px] text-[#333]">
+
+            <div className="flex flex-col items-center 2xl:items-start 2xl:gap-4">
+              <span className="font-medium text-[40px] 2xl:text-[64px] text-[#333]">
                 190+
               </span>
-              <span className="text-[#545454] leading-[32px] text-2xl">
+              <span className="text-[#545454] text-2xl">
                 Fields in Process
               </span>
             </div>
-            <div className="flex flex-col gap-8">
-              <span className="leading-[64px] -tracking-[1,92px] font-medium text-[64px] text-[#333]">
+            <div className="flex flex-col items-center 2xl:items-start 2xl:gap-4">
+              <span className="font-medium text-[40px] 2xl:text-[64px] text-[#333]">
                 126,000+
               </span>
-              <span className="text-[#545454] leading-[32px] text-2xl">
+              <span className="text-[#545454] text-2xl">
                 Farmer Around World
               </span>
             </div>
-            <div className="flex flex-col gap-8">
-              <span className="leading-[64px] -tracking-[1,92px] font-medium text-[64px] text-[#333]">
+            <div className="flex flex-col items-center 2xl:items-start 2xl:gap-4">
+              <span className="font-medium text-[40px] 2xl:text-[64px] text-[#333]">
                 $14 Billion
               </span>
-              <span className="text-[#545454] leading-[32px] text-2xl">
+              <span className="text-[#545454] text-2xl">
                 Agricultural Product
               </span>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 mt-[89px]">
-            <div className="flex flex-col gap-[15px]">
-              <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
+          <div className="grid grid-cols-1 2xl:grid-cols-2 mt-[89px] gap-6 2xl:gap-0">
+
+            <div className="flex flex-col">
+              <span className="text-base 2xl:text-[32px] 2xl:leading-normal text-[#545454]">
                 &#47;&#47; Farmers by Heart
               </span>
-              <span className="text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#545454] pl-[109px]">
+              <span className="text-base 2xl:text-[32px] 2xl:leading-normal font-medium text-[#545454] pl-[40px] 2xl:pl-[109px]">
                 Stewards by Choise.
               </span>
             </div>
-            <p className="text-[24px] leading-[180%] -tracking-[0.72px] text-[#545454]">
+
+            <p className="text-base 2xl:text-[24px] leading-[180%] -tracking-[0.72px] text-[#545454]">
               In the ever-evoling landscape of agriculture, sustainable farming
               practice have become a cornerstone for ensuring long-term
               environmental health and the vitality of our framing communities
@@ -179,29 +181,40 @@ export default function Home() {
 
 
 
-      <section>
-        <div className="container">
-          <h1 className="text-[64px] font-bold leading-[64px] -tracking-[1.92px] text-[#333] mt-[38px]">
+      <section className="container">
+          <h1 className="text-[36px] 2xl:text-[64px] font-bold leading-[1.25] 2xl:leading-[1] tracking-tight text-[#333] mt-[38px]">
             Rooted in Tradition, <br /> Growing for the Future
           </h1>
-          <div className="flex items-center justify-between mt-[136px]">
-            <span className="text-[32px] -tracking-[1px] text-[#545454]">
+
+          <div className="flex items-center justify-between gap-4 2xl:gap-8 mt-16 2xl:mt-[136px]">
+            <span className="text-[24px] 2xl:text-[32px] text-[#545454]">
               Mission
             </span>
-            <div className="border border-[#333] h-[1px] w-[200px]"></div>
-            <div className="relative w-[275px] h-[36px]">
+
+            <div className="flex-1 flex items-center">
+              <div className="bg-[#333] h-[1px] 2xl:h-[2px] w-full"></div>
+            </div>
+
+            <div className="relative w-[180px] 2xl:w-[360px] pt-[10%] 2xl:pt-[4%]">
               <NextImg
                 src="/assets/icon/HorizontalLogo.svg"
                 alt="BannerHeader"
-                objectFit="cover"
+                objectFit="contain"
+                className="absolute top-0 left-0"
               />
             </div>
-            <div className="border border-[#333] h-[1px] w-[255px]"></div>
-            <span className="text-[32px] -tracking-[1px] text-[#545454] leading-[140%]">
+
+            <div className="hidden 2xl:flex flex-1 items-center">
+              <div className="bg-[#333] h-[1px] 2xl:h-[2px] w-full"></div>
+            </div>
+
+            <span className="hidden 2xl:block text-[32px] -tracking-[1px] text-[#545454] leading-[140%]">
               © 2024
             </span>
           </div>
-          <div className="mt-[136px] grid grid-cols-[30%,40%,20%] justify-between">
+          
+
+          <div className="mt-16 2xl:mt-[136px] grid grid-cols-[30%,40%,20%] justify-between">
             <span className="text-[64px] font-bold leading-[64px] -tracking-[1.92px] text-[#545454]">
               What we do
             </span>
@@ -324,8 +337,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
       </section>
+
+
       <section className="mt-[136px] container">
         <div className="flex items-center justify-between mt-[136px]">
           <span className="text-[32px] -tracking-[1px] text-[#545454]">
