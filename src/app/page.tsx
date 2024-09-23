@@ -5,7 +5,6 @@ import Header from "@/components/common/Header/page";
 import NextImg from "@/components/common/next-img";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import CSS của Swiper
 import "swiper/css";
 
 export default function Home() {

@@ -179,7 +179,7 @@ export default function Footer() {
 
       {/*begin:: copyright */}
       <div className="bg-[#333] 2xl:py-12">
-        <div className="container flex 2xl:flex-row flex-col justify-between 2xl:gap-0 gap-10 3xl:p-0 p-6">
+        <div className="container flex 2xl:flex-row flex-col justify-between 2xl:gap-0 gap-10 2xl:p-0 p-6">
           <p className="font-normal text-white text-base inline-block">
             © Copyright 2024 villageagriculture. All Right Reserved
           </p>
