@@ -83,10 +83,10 @@ export default function Footer() {
     <Fragment>
       {/* begin:: main footer */}
       <div className="container">
-        <div className="w-full min-h-[300px] flex lg:flex-row flex-col gap-10 mb-10">
-          <div className="md:w-[50%] w-full flex flex-col justify-between gap-20">
+        <div className="w-full min-h-[300px] flex 2xl:flex-row flex-col gap-10 mb-10">
+          <div className="md:w-[50%] w-full flex flex-col justify-between gap-12 2xl:gap-20">
             {/* begin:: logo */}
-            <div className="relative w-[200px] md:w-[498px] h-[184px] cursor-pointer">
+            <div className="relative w-[250px] 2xl:w-[498px] h-[92px] 2xl:h-[184px] cursor-pointer 2xl:mx-0 mx-auto ">
               <NextImg
                 src="/assets/image/logo-ft.png"
                 alt="Logo-Footer"
@@ -96,15 +96,15 @@ export default function Footer() {
             {/* end:: logo */}
 
             {/* begin:: quote */}
-            <p className="text-[48px] text-[#121212] leading-[64px]">
-              <span className="text-[#545454]">Reach</span> Out <br />
+            <p className="text-[32px] 2xl:text-[48px] text-[#121212] leading-[64px] font-medium">
+              <span className="text-[#545454] font-normal">Reach</span> Out <br />
               with Villageagriculture
             </p>
             {/* end:: quote */}
           </div>
-          <div className="md:w-[50%] w-full flex flex-col justify-between mt-20">
+          <div className="md:w-[50%] w-full flex flex-col justify-between 2xl:mt-20 mt-0">
             {/* begin:: links */}
-            <div className="w-full flex justify-between">
+            <div className="w-full 2xl:flex 2xl:justify-between grid grid-cols-2 gap-6">
               {linksData.map((linkGroup, index) => {
                 return (
                   <div key={index}>
@@ -125,7 +125,7 @@ export default function Footer() {
             {/* end:: links */}
 
             {/* begin:: social & lang */}
-            <div className="w-full flex justify-between">
+            <div className="w-full flex 2xl:flex-row flex-col justify-between 2xl:mt-0 mt-10 gap-6">
               <div className="flex gap-5 items-center">
                 <Image
                   src={"/assets/image/footer_socical_1.png"}
@@ -162,10 +162,14 @@ export default function Footer() {
                   height={24}
                 />
               </div> */}
-			  <select name="" id="" className="pl-10 w-48 bg-[#333] font-semibold rounded-lg flex justify-between items-center text-white">
-				<option value="">English - En</option>
-				<option value="">Vietnamese</option>
-			  </select>
+              <select
+                name=""
+                id=""
+                className="pl-10 w-48 bg-[#333] font-semibold rounded-lg flex justify-between items-center text-white 2xl:py-0 py-1"
+              >
+                <option value="">English - En</option>
+                <option value="">Vietnamese</option>
+              </select>
             </div>
             {/* end:: social & lang */}
           </div>
@@ -174,13 +178,13 @@ export default function Footer() {
       {/* end:: main footer */}
 
       {/*begin:: copyright */}
-      <div className="bg-[#333] py-12  ">
-        <div className="container flex justify-between">
+      <div className="bg-[#333] 2xl:py-12">
+        <div className="container flex 2xl:flex-row flex-col justify-between 2xl:gap-0 gap-10 3xl:p-0 p-6">
           <p className="font-normal text-white text-base inline-block">
             © Copyright 2024 villageagriculture. All Right Reserved
           </p>
           <div className="font-normal text-white text-sm uppercase flex gap-32">
-            <p className="inline-block pr-32 md:pr-2">Terms of use</p>
+            <p className="inline-block 2xl:pr-32 md:pr-2">Terms of use</p>
             <p className="inline-block">Privacy policy</p>
           </div>
         </div>
