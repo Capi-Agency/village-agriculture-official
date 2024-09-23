@@ -7,5 +7,24 @@
 .container{
     @apply px-20;
 }
-
-
+/* Container cho thanh tiến trình */
+.progress-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .progress-bar-background {
+    width: 20%; /* Độ rộng của thanh kéo */
+    height: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+  }
+  
+  .progress-bar {
+    width: 0; /* Mặc định là 0, sẽ thay đổi khi slide chuyển */
+    height: 100%;
+    background-color: #545454; /* Màu của thanh kéo */
+    transition: width 0.3s ease;
+  }
+  

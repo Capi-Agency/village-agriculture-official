@@ -1,9 +1,62 @@
+"use client";
+
 import Footer from "@/components/common/Footer/page";
 import Header from "@/components/common/Header/page";
 import NextImg from "@/components/common/next-img";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import CustomSwiper from "../components/Swiper/CustomSwiper";
 
+// Import CSS của Swiper
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function Home() {
+  const slides = [
+    {
+      id: "01",
+      title: "Crop Consulting",
+      description:
+        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      imageUrl: "/assets/image/Frame 1261154501.png",
+    },
+    {
+      id: "02",
+      title: "Crop Consulting",
+      description:
+        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      imageUrl: "/assets/image/Frame 1261154502.png",
+    },
+    {
+      id: "03",
+      title: "Crop Consulting",
+      description:
+        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      imageUrl: "/assets/image/Frame 1261154503.png",
+    },
+    {
+      id: "04",
+      title: "Crop Consulting",
+      description:
+        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      imageUrl: "/assets/image/Frame 1261154501.png",
+    },
+    {
+      id: "05",
+      title: "Crop Consulting",
+      description:
+        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      imageUrl: "/assets/image/Frame 1261154502.png",
+    },
+    {
+      id: "06",
+      title: "Crop Consulting",
+      description:
+        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      imageUrl: "/assets/image/Frame 1261154503.png",
+    }
+  ];
   return (
     <div>
       <Header />
@@ -114,7 +167,7 @@ export default function Home() {
             <div className="border border-[#333] h-[1px] w-[200px]"></div>
             <div className="relative w-[275px] h-[36px]">
               <NextImg
-                src="/assets/icon/Horizontal Logo.svg"
+                src="/assets/icon/HorizontalLogo.svg"
                 alt="BannerHeader"
                 objectFit="cover"
               />
@@ -136,7 +189,89 @@ export default function Home() {
               All Benefits
             </button>
           </div>
-        
+          <div className="mt-[60px]">
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={30}
+              slidesPerView={3}
+              navigation
+              grabCursor={true}
+              loop={false}
+              onInit={(swiper) => {
+                const progressBar = document.getElementById(
+                  "custom-progress-bar"
+                );
+                const slidesPerView = swiper.params.slidesPerView ?? 1;
+                if (progressBar && typeof slidesPerView === "number") {
+                  const totalSlides = swiper.slides.length - slidesPerView + 1;
+                  const percentage =
+                    ((swiper.activeIndex + 1) / totalSlides) * 100;
+                  progressBar.style.width = `${percentage}%`;
+                }
+              }}
+              onSlideChange={(swiper) => {
+                const progressBar = document.getElementById(
+                  "custom-progress-bar"
+                );
+                const slidesPerView = swiper.params.slidesPerView ?? 1;
+                if (progressBar && typeof slidesPerView === "number") {
+                  const totalSlides = swiper.slides.length - slidesPerView + 1;
+                  const percentage =
+                    ((swiper.activeIndex + 1) / totalSlides) * 100;
+                  progressBar.style.width = `${percentage}%`;
+                }
+              }}
+            >
+              {slides.map((slide, index) => (
+                <SwiperSlide key={index}>
+                  <div className="relative p-7 rounded-lg transition duration-300 cursor-pointer flex flex-col gap-[64px]">
+                    <div className="absolute w-full h-full inset-0 z-0">
+                      <div className="relative w-full h-full rounded-lg">
+                        <NextImg
+                          src={slide.imageUrl}
+                          alt="Village-agriculture"
+                          objectFit="cover"
+                          className="rounded-lg"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex justify-between gap-5 relative z-10">
+                      <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF] mt-1">
+                        {slide.id}
+                      </span>
+                      <h4 className="text-[26px] font-bold leading-[26px] -tracking-[0.78px] text-[#FFF] place-content-end">
+                        {slide.title}
+                      </h4>
+                      <div className="border border-[#FFF] p-3 rounded-full">
+                        <div className="relative w-5 h-5">
+                          <NextImg
+                            src="/assets/icon/north_east.svg"
+                            alt="Village-agriculture"
+                            objectFit="cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-[6px] relative z-10">
+                      <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
+                        standard of quality
+                      </span>
+                      <p className="text-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
+                        {slide.description}
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            {/* Custom Progress Bar */}
+            <div className="progress-container mt-[65px]">
+              <div className="w-[20%] h-[15px] overflow-hidden border border-[#333]">
+                <div id="custom-progress-bar" className="progress-bar"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section className="mt-[136px] container">
@@ -147,7 +282,7 @@ export default function Home() {
           <div className="border border-[#333] h-[1px] w-[200px]"></div>
           <div className="relative w-[275px] h-[36px]">
             <NextImg
-              src="/assets/icon/Horizontal Logo.svg"
+              src="/assets/icon/HorizontalLogo.svg"
               alt="BannerHeader"
               objectFit="cover"
             />
@@ -240,7 +375,7 @@ export default function Home() {
           <div className="border border-[#333] h-[1px] w-[200px]"></div>
           <div className="relative w-[275px] h-[36px]">
             <NextImg
-              src="/assets/icon/Horizontal Logo.svg"
+              src="/assets/icon/HorizontalLogo.svg"
               alt="BannerHeader"
               objectFit="cover"
             />
@@ -274,6 +409,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <CustomSwiper />
       </section>
       <section className="container mt-120px">
         <div className="flex items-center justify-between mt-[136px]">
@@ -283,7 +419,7 @@ export default function Home() {
           <div className="border border-[#333] h-[1px] w-[200px]"></div>
           <div className="relative w-[275px] h-[36px]">
             <NextImg
-              src="/assets/icon/Horizontal Logo.svg"
+              src="/assets/icon/HorizontalLogo.svg"
               alt="BannerHeader"
               objectFit="cover"
             />
@@ -363,7 +499,7 @@ export default function Home() {
             <div className="border border-[#333] h-[1px] w-[200px]"></div>
             <div className="relative w-[275px] h-[36px]">
               <NextImg
-                src="/assets/icon/Horizontal Logo.svg"
+                src="/assets/icon/HorizontalLogo.svg"
                 alt="BannerHeader"
                 objectFit="cover"
               />
@@ -429,8 +565,8 @@ export default function Home() {
                   </p>
                   <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry&apos;s
-                    standard dummy text ever since the 1500s
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&apos;s standard dummy text ever since the 1500s
                   </p>
                   <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-[136px]">
                     Learn More
@@ -450,8 +586,8 @@ export default function Home() {
                   </p>
                   <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry&apos;s
-                    standard dummy text ever since the 1500s
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&apos;s standard dummy text ever since the 1500s
                   </p>
                   <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-[53px]">
                     Learn More
@@ -473,8 +609,8 @@ export default function Home() {
                   </p>
                   <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry&apos;s
-                    standard dummy text ever since the 1500s
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&apos;s standard dummy text ever since the 1500s
                   </p>
                   <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-[136px]">
                     Learn More
@@ -494,8 +630,8 @@ export default function Home() {
                   </p>
                   <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry&apos;s
-                    standard dummy text ever since the 1500s
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&apos;s standard dummy text ever since the 1500s
                   </p>
                   <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-[53px]">
                     Learn More
@@ -515,7 +651,7 @@ export default function Home() {
             <div className="border border-[#333] h-[1px] w-[200px]"></div>
             <div className="relative w-[275px] h-[36px]">
               <NextImg
-                src="/assets/icon/Horizontal Logo.svg"
+                src="/assets/icon/HorizontalLogo.svg"
                 alt="BannerHeader"
                 objectFit="cover"
               />
@@ -673,7 +809,10 @@ export default function Home() {
                 className="px-8 py-2 bg-[#FFF] text-[#333] text-[18px] font-semibold -tracking-[0.54px] leading-[48px] rounded-full w-[410px] placeholder:text-text-[18px] placeholder:font-semibold placeholder:-tracking-[0.54px] placeholder:text-[#333] focus:outline-none"
                 placeholder="Your email address"
               />
-              <button className="px-8 py-2 bg-[#404040] text-[#FFF] text-[18px] font-semibold -tracking-[0.54px] rounded-full absolute right-2 top-1 bottom-1" type="submit">
+              <button
+                className="px-8 py-2 bg-[#404040] text-[#FFF] text-[18px] font-semibold -tracking-[0.54px] rounded-full absolute right-2 top-1 bottom-1"
+                type="submit"
+              >
                 Join Now
               </button>
             </form>

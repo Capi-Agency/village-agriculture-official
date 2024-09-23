@@ -1,0 +1,35 @@
+.swiperContainer {
+  width: 100%;
+  height: 500px; /* Tùy chọn */
+}
+
+.swiperSlide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideImage {
+  object-fit: cover; /* Đảm bảo ảnh vừa khít trong khung */
+}
+
+.slideInfo {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.thumbsSwiper {
+  margin-top: 20px;
+  width: 100%;
+  height: 100px; /* Chiều cao của Swiper nhỏ */
+}
+
+.thumbnail {
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet {
+  background: #000;
+}

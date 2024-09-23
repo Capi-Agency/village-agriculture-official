@@ -6,7 +6,7 @@ export default function Header() {
       <div className="flex items-center justify-between">
         <div className="relative w-[275px] h-[36px] cursor-pointer">
           <NextImg
-            src="/assets/icon/Horizontal Logo.svg"
+            src="/assets/icon/HorizontalLogo.svg"
             alt="BannerHeader"
             objectFit="cover"
           />
