@@ -1,5 +1,5 @@
 "use client";
-import { FC, useState } from "react";
+import { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import NextImg from "../next-img";
 
