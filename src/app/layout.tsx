@@ -18,9 +18,9 @@ export default function RootLayout({
   };
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = 'hidden'; // Ngăn cuộn body khi menu mở
+      document.body.style.overflow = 'hidden'; 
     } else {
-      document.body.style.overflow = 'auto'; // Khôi phục cuộn khi menu đóng
+      document.body.style.overflow = 'auto'; 
     }
   }, [isMenuOpen]);
   return (

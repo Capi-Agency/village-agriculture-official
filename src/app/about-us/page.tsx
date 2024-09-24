@@ -1,13 +1,13 @@
-import React from 'react'
+// import React from 'react'
 
-type Props = {}
+// type Props = {}
 
-const AboutUs = (props: Props) => {
-  return (
-    <div>
+// const AboutUs = (props: Props) => {
+//   return (
+//     <div>
         
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default AboutUs
+// export default AboutUs
