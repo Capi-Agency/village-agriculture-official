@@ -81,7 +81,7 @@ export default function Footer() {
   return (
     <Fragment>
       {/* begin:: main footer */}
-      <div className="container">
+      <div className="container" data-aos="fade-up">
         <div className="w-full min-h-[300px] flex 2xl:flex-row flex-col gap-10 mb-10">
           <div className="md:w-[50%] w-full flex flex-col justify-between gap-12 2xl:gap-20">
             {/* begin:: logo */}

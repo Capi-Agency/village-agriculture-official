@@ -36,7 +36,7 @@ const Slide1 = () => {
   ];
   return (
     <>
-      <div className="mt-[60px] 2xl:block hidden">
+      <div className="mt-[60px] 2xl:block hidden ">
         <Swiper
           spaceBetween={30}
           slidesPerView={3}
@@ -69,7 +69,7 @@ const Slide1 = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="relative p-7 rounded-lg transition duration-300 cursor-pointer flex flex-col gap-[64px]">
+              <div className="relative p-7 rounded-lg transition duration-300 cursor-pointer flex flex-col gap-[64px]" data-aos="fade-up">
                 <div className="absolute w-full h-full inset-0 z-0">
                   <div className="relative w-full h-full rounded-lg">
                     <NextImg
@@ -111,7 +111,7 @@ const Slide1 = () => {
         </Swiper>
 
         {/* Custom Progress Bar */}
-        <div className="mt-[65px] flex justify-center items-center">
+        <div className="mt-[65px] flex justify-center items-center" data-aos="fade-up">
           <div className="w-[300px] h-[15px] overflow-hidden border border-[#333]">
             <div
               id="custom-progress-bar"
@@ -146,7 +146,7 @@ const Slide1 = () => {
           {slides.map((slide, index) => (
             <div
               className="relative p-7 rounded-lg transition duration-300 cursor-pointer flex flex-col gap-[64px]"
-              key={index}
+              key={index} data-aos="fade-up"
             >
               <div className="absolute w-full h-full inset-0 z-0">
                 <div className="relative w-full h-full rounded-lg">

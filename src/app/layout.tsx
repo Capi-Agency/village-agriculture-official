@@ -4,6 +4,8 @@ import "./globals.css";
 import Footer from "@/components/common/Footer/page";
 import Menu from "@/components/common/Menu/page";
 import { useEffect, useState } from "react";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 
 export default function RootLayout({
@@ -23,6 +25,9 @@ export default function RootLayout({
       document.body.style.overflow = 'auto'; 
     }
   }, [isMenuOpen]);
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <html lang="en">
       <body

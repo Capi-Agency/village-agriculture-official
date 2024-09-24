@@ -2,14 +2,15 @@
 
 import NextImg from "@/components/common/next-img";
 import Slide1 from "@/components/Swiper/Slide1/index";
+import CountUp from "react-countup";
 
 export default function Home() {
   return (
     <div>
       {/* Begin: banner */}
       <section className="container 2xl:mt-[117px]">
-        <div className="relative">
-          <div className="relative w-full pt-[80%]">
+        <div className="relative" data-aos="fade-up">
+          <div className="relative w-full pt-[80%]" data-aos="fade-up">
             <NextImg
               src="/assets/image/Rectangle 171.png"
               alt="Village-agriculture"
@@ -60,7 +61,7 @@ export default function Home() {
           <div className="flex flex-col 2xl:flex-row items-center justify-between gap-[48px] 2xl:gap-0">
             <div className="flex flex-col items-center 2xl:items-start 2xl:gap-4">
               <span className="font-medium text-[40px] 2xl:text-[64px] text-[#333]">
-                40+
+                <CountUp start={0} end={40} duration={4} />+
               </span>
               <span className="text-[#545454] text-2xl">
                 Year of Experiences
@@ -68,22 +69,30 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-center 2xl:items-start 2xl:gap-4">
-              <span className="font-medium text-[40px] 2xl:text-[64px] text-[#333]">
-                190+
-              </span>
+              <p className="font-medium text-[40px] 2xl:text-[64px] text-[#333]">
+                <CountUp start={0} end={190} duration={4} />+
+              </p>
               <span className="text-[#545454] text-2xl">Fields in Process</span>
             </div>
             <div className="flex flex-col items-center 2xl:items-start 2xl:gap-4">
-              <span className="font-medium text-[40px] 2xl:text-[64px] text-[#333]">
-                126,000+
-              </span>
+              <p className="font-medium text-[40px] 2xl:text-[64px] text-[#333]">
+                <CountUp
+                  start={100000}
+                  end={126000}
+                  duration={4}
+                  formattingFn={(value) =>
+                    new Intl.NumberFormat("en-US").format(value)
+                  }
+                />
+                +
+              </p>
               <span className="text-[#545454] text-2xl">
                 Farmer Around World
               </span>
             </div>
             <div className="flex flex-col items-center 2xl:items-start 2xl:gap-4">
               <span className="font-medium text-[40px] 2xl:text-[64px] text-[#333]">
-                $14 Billion
+                $<CountUp start={0} end={14} duration={3} /> Billion
               </span>
               <span className="text-[#545454] text-2xl">
                 Agricultural Product
@@ -92,7 +101,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 2xl:grid-cols-2 mt-[89px] gap-6 2xl:gap-0">
-            <div className="flex flex-col">
+            <div className="flex flex-col" data-aos="fade-up">
               <span className="text-base 2xl:text-[32px] 2xl:leading-normal text-[#545454]">
                 &#47;&#47; Farmers by Heart
               </span>
@@ -101,7 +110,7 @@ export default function Home() {
               </span>
             </div>
 
-            <p className="text-base 2xl:text-[24px] leading-[180%] -tracking-[0.72px] text-[#545454]">
+            <p className="text-base 2xl:text-[24px] leading-[180%] -tracking-[0.72px] text-[#545454]" data-aos="fade-up">
               In the ever-evoling landscape of agriculture, sustainable farming
               practice have become a cornerstone for ensuring long-term
               environmental health and the vitality of our framing communities
@@ -113,11 +122,11 @@ export default function Home() {
       {/* End: banner */}
 
       <section className="container">
-        <h1 className="text-[36px] 2xl:text-[64px] font-bold leading-[1.25] 2xl:leading-[1] tracking-tight text-[#333] mt-[38px]">
+        <h1 className="text-[36px] 2xl:text-[64px] font-bold leading-[1.25] 2xl:leading-[1] tracking-tight text-[#333] mt-[38px]" data-aos="fade-up">
           Rooted in Tradition, <br /> Growing for the Future
         </h1>
 
-        <div className="flex items-center justify-between gap-4 2xl:gap-8 mt-16 2xl:mt-[136px]">
+        <div className="flex items-center justify-between gap-4 2xl:gap-8 mt-16 2xl:mt-[136px]" data-aos="fade-up">
           <span className="text-[24px] 2xl:text-[32px] text-[#545454] font-medium">
             Mission
           </span>
@@ -145,14 +154,14 @@ export default function Home() {
         </div>
 
         <div className="mt-8 2xl:mt-[136px] flex flex-col gap-5 2xl:gap-0 2xl:grid 2xl:grid-cols-[30%,40%,20%] justify-between">
-          <span className="text-[24px] 2xl:text-[64px] font-bold -tracking-[1.92px] text-[#545454]">
+          <span className="text-[24px] 2xl:text-[64px] font-bold -tracking-[1.92px] text-[#545454]" data-aos="fade-up">
             What we do
           </span>
-          <p className="text-base 2xl:text-[24px] leading-[180%] -tracking-[0.48px] 2xl:-tracking-[0.72px] text-[#545454]">
+          <p className="text-base 2xl:text-[24px] leading-[180%] -tracking-[0.48px] 2xl:-tracking-[0.72px] text-[#545454]" data-aos="fade-up">
             In the ever-evoling landscape of agriculture, sustainable farming
             practice have become a cornerstone for ensuring
           </p>
-          <button className="self-start text-xs 2xl:text-2xl -tracking-[0.72px] font-semibold text-[#FFF] px-7 2xl:px-16 2xl:py-4 bg-[#545454] rounded-full h-10 2xl:h-20">
+          <button className="self-start text-xs 2xl:text-2xl -tracking-[0.72px] font-semibold text-[#FFF] px-7 2xl:px-16 2xl:py-4 bg-[#545454] rounded-full h-10 2xl:h-20" data-aos="fade-up">
             All Benefits
           </button>
         </div>
@@ -160,7 +169,7 @@ export default function Home() {
       </section>
 
       <section className="mt-16 2xl:mt-[136px] container">
-        <div className="flex items-center justify-between gap-4 2xl:gap-8 mt-16 2xl:mt-[136px]">
+        <div className="flex items-center justify-between gap-4 2xl:gap-8 mt-16 2xl:mt-[136px]" data-aos="fade-up">
           <span className="text-[24px] 2xl:text-[32px] text-[#545454] font-medium">
             Blog
           </span>
@@ -187,7 +196,7 @@ export default function Home() {
           </span>
         </div>
         <div className="mt-[72px] 2xl:mt-[133px] flex 2xl:flex-row flex-col items-center gap-7 2xl:gap-4">
-          <div>
+          <div data-aos="fade-up">
             <div className="relative w-full h-[362px]">
               <NextImg
                 src="/assets/image/user1.png"
@@ -211,7 +220,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <div className="relative w-full h-[362px]">
               <NextImg
                 src="/assets/image/user2.png"
@@ -235,7 +244,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <div className="relative w-full h-[362px]">
               <NextImg
                 src="/assets/image/user3.png"
@@ -262,7 +271,7 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-[68px] 2xl:mt-[108px] container">
-        <div className="flex items-center justify-between gap-4 2xl:gap-8 mt-16 2xl:mt-[136px]">
+        <div className="flex items-center justify-between gap-4 2xl:gap-8 mt-16 2xl:mt-[136px]" data-aos="fade-up">
           <span className="text-[24px] 2xl:text-[32px] text-[#545454] font-medium">
             Our Work
           </span>
@@ -290,7 +299,7 @@ export default function Home() {
         </div>
 
         <div className="grid 2xl:grid-cols-2 items-center mt-[68px] 2xl:mt-[150px]">
-          <div>
+          <div data-aos="fade-up">
             <p className="text-[36px] 2xl:text-[64px] leading-[44px] 2xl:leading-[64px] -tracking-[1.92px]">
               Real <span className="font-bold">Solutions</span>, <br />
               Real
@@ -298,7 +307,7 @@ export default function Home() {
             </p>
           </div>
           <div className="2xl:flex flex-col gap-10 items-end hidden">
-            <p className="flex flex-col gap-[15px]">
+            <p className="flex flex-col gap-[15px]" data-aos="fade-up">
               <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
                 &#47;&#47; Farmers by Heart
               </span>
@@ -306,7 +315,7 @@ export default function Home() {
                 Stewards by Choise.
               </span>
             </p>
-            <p className="text-2xl -tracking-[0.72px]  leading-[180%] text-right w-[90%] text-[#545454]">
+            <p className="text-2xl -tracking-[0.72px]  leading-[180%] text-right w-[90%] text-[#545454]" data-aos="fade-up">
               In the ever-evoling landscape of agriculture, sustainable farming
               practice have become a cornerstone for ensuring long-term
               environmental health and the vitality of our framing communities
@@ -317,7 +326,7 @@ export default function Home() {
         {/* Slide 2 */}
         <div className="mt-[50px] 2xl:block hidden">
           <div className="grid 2xl:grid-cols-2 gap-5">
-            <div className="relative w-full h-[598px] rounded-lg">
+            <div className="relative w-full h-[598px] rounded-lg" data-aos="fade-up">
               <NextImg
                 src="/assets/image/Rectangle 167.png"
                 alt="Village-agriculture"
@@ -326,7 +335,7 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col gap-[90px]">
-              <div className="grid grid-cols-2 items-center gap-3">
+              <div className="grid grid-cols-2 items-center gap-3" data-aos="fade-up">
                 <div className="relative w-full h-[290px] rounded-lg">
                   <NextImg
                     src="/assets/image/Rectangle 168.png"
@@ -344,7 +353,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex justify-between ml-[30%]">
+              <div className="flex justify-between ml-[30%]" data-aos="fade-up">
                 <span className="text-[32px] -tracking-[0.96px] text-[#333] leading-[32px]">
                   Prev
                 </span>
@@ -369,7 +378,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="grid 2xl:grid-cols-2 justify-between">
+          <div className="grid 2xl:grid-cols-2 justify-between" data-aos="fade-up">
             <div className="flex items-center justify-between">
               <div className="flex flex-col gap-1 place-self-end">
                 <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
@@ -410,7 +419,7 @@ export default function Home() {
         {/* slide 2 */}
         <div className="mt-[50px] 2xl:hidden block">
           <div className="flex flex-col gap-8">
-            <div className="relative w-full h-[598px] rounded-lg">
+            <div className="relative w-full h-[598px] rounded-lg" data-aos="fade-up">
               <NextImg
                 src="/assets/image/Rectangle 167.png"
                 alt="Village-agriculture"
@@ -418,14 +427,14 @@ export default function Home() {
                 className="rounded-lg"
               />
             </div>
-            <p className="text-[#16px] 2xl:text-2xl -tracking-[0.72px]  leading-[180%] text-right text-[#545454]">
+            <p className="text-[#16px] 2xl:text-2xl -tracking-[0.72px]  leading-[180%] text-right text-[#545454]" data-aos="fade-up">
               In the ever-evoling landscape of agriculture, sustainable farming
               practice have become a cornerstone for ensuring long-term
               environmental health and the vitality of our framing communities
             </p>
           </div>
           <div className="flex flex-col mt-[53px]">
-            <div className="relative w-full h-[290px] rounded-lg">
+            <div className="relative w-full h-[290px] rounded-lg" data-aos="fade-up">
               <NextImg
                 src="/assets/image/Rectangle 168.png"
                 alt="Village-agriculture"
@@ -433,7 +442,7 @@ export default function Home() {
                 className="rounded-lg"
               />
             </div>
-            <div className="flex items-center gap-[55px] mt-3">
+            <div className="flex items-center gap-[55px] mt-3" data-aos="fade-up">
               <div className="flex flex-col gap-1">
                 <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
                   Year
@@ -453,7 +462,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col mt-[53px]">
-            <div className="relative w-full h-[290px] rounded-lg">
+            <div className="relative w-full h-[290px] rounded-lg" data-aos="fade-up">
               <NextImg
                 src="/assets/image/Rectangle 169.png"
                 alt="Village-agriculture"
@@ -461,7 +470,7 @@ export default function Home() {
                 className="rounded-lg"
               />
             </div>
-            <div className="flex items-center gap-[55px] mt-3">
+            <div className="flex items-center gap-[55px] mt-3" data-aos="fade-up">
               <div className="flex flex-col gap-1">
                 <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
                   Company
@@ -475,7 +484,7 @@ export default function Home() {
         </div>
       </section>
       <section className="container mt-16 2xl:mt-120px">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between" data-aos="fade-up">
           <span className="text-[24px] 2xl:text-[32px] -tracking-[1px] font-medium text-[#545454]">
             Blog
           </span>
@@ -492,7 +501,7 @@ export default function Home() {
             © 2024
           </span>
         </div>
-        <div className="flex items-center justify-between mt-[50px] 2xl:mt-[103px]">
+        <div className="flex items-center justify-between mt-[50px] 2xl:mt-[103px]" data-aos="fade-up">
           <p className="text-[32px] -tracking-[0.96px]  leading-[32px] text-left text-[#545454] 2xl:block hidden">
             &#47;&#47; All
           </p>
@@ -501,7 +510,7 @@ export default function Home() {
             Farming 101
           </h1>
         </div>
-        <div className="mt-10 2xl:mt-[116px] relative">
+        <div className="mt-10 2xl:mt-[116px] relative" data-aos="fade-up">
           <div className="relative w-full 2xl:h-[720px] h-[553px]">
             <NextImg
               src="/assets/image/Rectangle 166.png"
@@ -539,7 +548,7 @@ export default function Home() {
           </button>
         </div>
         <div className="mt-[42px] 2xl:mt-[104px] flex flex-col 2xl:grid 2xl:grid-cols-[30%,55%] 2xl:items-center 2xl:justify-between">
-          <div className="flex flex-col 2xl:gap-[15px]">
+          <div className="flex flex-col 2xl:gap-[15px]" data-aos="fade-up">
             <span className="text-base 2xl:text-[32px] -tracking-[0.48px] 2xl:-tracking-[0.96px] leading-[32px] text-[#545454]">
               &#47;&#47; Farmers by Heart
             </span>
@@ -547,7 +556,7 @@ export default function Home() {
               Stewards by Choise.
             </span>
           </div>
-          <p className="text-[24px] leading-[28px] -tracking-[0.72px] text-[#545454] 2xl:text-right mt-6 2xl:mt-0 ">
+          <p className="text-[24px] leading-[28px] -tracking-[0.72px] text-[#545454] 2xl:text-right mt-6 2xl:mt-0 " data-aos="fade-up">
             In the ever-evoling landscape of agriculture, sustainable farming
             practice have become a cornerstone for ensuring long-term
             environmental health and the vitality of our framing communities
@@ -556,7 +565,7 @@ export default function Home() {
       </section>
       <section className="mt-20 2xl:mt-[210px]">
         <div className="container">
-          <div className="flex items-center justify-between gap-4 2xl:gap-8">
+          <div className="flex items-center justify-between gap-4 2xl:gap-8" data-aos="fade-up">
             <span className="text-[24px] 2xl:text-[32px] text-[#545454] font-medium">
               Our Stories
             </span>
@@ -582,7 +591,7 @@ export default function Home() {
               © 2024
             </span>
           </div>
-          <div className="mt-[182px] 2xl:flex justify-end hidden">
+          <div className="mt-[182px] 2xl:flex justify-end hidden" data-aos="fade-up">
             <p className="text-[48px] -tracking-[1.44px]  leading-[64px] text-[#545454] text-right w-[70%]">
               Lorem Ipsum is simply dummy text of&nbsp;
               <span className="font-medium text-[#333]">
@@ -596,7 +605,7 @@ export default function Home() {
           </div>
           <div className="2xl:grid 2xl:grid-cols-[35%,65%] mt-[66px] 2xl:mt-[140px]">
             <div className="relative 2xl:block hidden">
-              <ul className="flex flex-col gap-8 absolute top-24 left-0">
+              <ul className="flex flex-col gap-8 absolute top-24 left-0" data-aos="fade-up">
                 <li className="text-[32px] -tracking-[0.96px]  leading-[32px] text-[#545454]">
                   &#47;&#47; All
                 </li>
@@ -613,7 +622,7 @@ export default function Home() {
                   &#47;&#47; Vertical Farming
                 </li>
               </ul>
-              <div className="flex flex-col text-right absolute bottom-0 left-0">
+              <div className="flex flex-col text-right absolute bottom-0 left-0" data-aos="fade-up">
                 <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
                   &#47;&#47; Nourishing the Land
                 </span>
@@ -624,7 +633,7 @@ export default function Home() {
             </div>
             <div className="">
               <div className="flex 2xl:flex-row flex-col gap-[57px] 2xl:gap-6">
-                <div>
+                <div data-aos="fade-up">
                   <div className="relative w-full h-[302px]">
                     <NextImg
                       src="/assets/image/Rectangle 163.png"
@@ -645,7 +654,7 @@ export default function Home() {
                     Learn More
                   </button>
                 </div>
-                <div>
+                <div data-aos="fade-up">
                   <div className="relative w-full h-[589px]">
                     <NextImg
                       src="/assets/image/Rectangle 164.png"
@@ -668,7 +677,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex 2xl:flex-row flex-col gap-[57px] 2xl:gap-6 mt-[62px] 2xl:mt-[140px]">
-                <div>
+                <div data-aos="fade-up">
                   <div className="relative w-full h-[302px]">
                     <NextImg
                       src="/assets/image/Rectangle 161.png"
@@ -689,7 +698,7 @@ export default function Home() {
                     Learn More
                   </button>
                 </div>
-                <div>
+                <div data-aos="fade-up">
                   <div className="relative w-full h-[589px]">
                     <NextImg
                       src="/assets/image/Rectangle 162.png"
@@ -717,7 +726,7 @@ export default function Home() {
       </section>
       <section className="mt-20 2xl:mt-[117px]">
         <div className="container">
-          <div className="flex items-center justify-between gap-4 2xl:gap-8">
+          <div className="flex items-center justify-between gap-4 2xl:gap-8" data-aos="fade-up">
             <span className="text-[24px] 2xl:text-[32px] font-medium text-[#545454]">
               Sustainability
             </span>
@@ -743,7 +752,7 @@ export default function Home() {
               © 2024
             </span>
           </div>
-          <div className="mt-[50px] 2xl:mt-[180px] flex justify-end">
+          <div className="mt-[50px] 2xl:mt-[180px] flex justify-end" data-aos="fade-up">
             <p className="text-2xl 2xl:text-[48px] -tracking-[1.44px] leading-[180%] 2xl:leading-[64px] text-[#545454] text-left 2xl:text-right w-full">
               Lorem Ipsum is simply dummy text of&nbsp;
               <span className="font-medium text-[#333]">
@@ -755,7 +764,7 @@ export default function Home() {
               </span>
             </p>
           </div>
-          <div className="2xl:flex items-center justify-between mt-[50px] hidden">
+          <div className="2xl:flex items-center justify-between mt-[50px] hidden" data-aos="fade-up">
             <p className="text-[24px] -tracking-[0.72px]  leading-[64px] text-[#545454] font-light">
               Lorem Ipsum is simply dummy text of the printing
             </p>
@@ -763,7 +772,7 @@ export default function Home() {
               All Benefits
             </button>
           </div>
-          <div className="2xl:flex flex-col text-right justify-end mt-[91px] hidden">
+          <div className="2xl:flex flex-col text-right justify-end mt-[91px] hidden" data-aos="fade-up">
             <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
               &#47;&#47; Sustainable Arigculture,
             </span>
@@ -772,7 +781,7 @@ export default function Home() {
             </span>
           </div>
           <div className="flex flex-col 2xl:grid grid-cols-3 gap-8 2xl:gap-6 2xl:mt-0 mt-[50px]">
-            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:h-[350px]">
+            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:h-[350px]" data-aos="fade-up">
               <div className="flex justify-between 2xl:items-stretch items-center ">
                 <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   01
@@ -801,7 +810,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[83px] 2xl:h-[350px]">
+            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[83px] 2xl:h-[350px]" data-aos="fade-up">
               <div className="flex justify-between 2xl:items-stretch items-center">
                 <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   02
@@ -830,7 +839,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[211px] 2xl:h-[350px]">
+            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[211px] 2xl:h-[350px]" data-aos="fade-up">
               <div className="flex justify-between 2xl:items-stretch items-center">
                 <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   03
@@ -860,7 +869,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="2xl:flex flex-col text-right float-start hidden">
+          <div className="2xl:flex flex-col text-right float-start hidden" data-aos="fade-up">
             <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
               &#47;&#47; Cultivating Dreams,
             </span>
@@ -868,7 +877,7 @@ export default function Home() {
               Showing Success.
             </span>
           </div>
-          <div className="flex flex-col 2xl:mt-0 mt-[50px] 2xl:hidden">
+          <div className="flex flex-col 2xl:mt-0 mt-[50px] 2xl:hidden" data-aos="fade-up">
             <span className="text-base 2xl:text-[32px] -tracking-[0.48px] 2xl:-tracking-[0.96px] leading-[32px] text-[#545454] ml-5">
               &#47;&#47; Nourishing the Land
             </span>
@@ -881,7 +890,7 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section className="mt-[84px] 2xl:mt-[250px] mb-[68px] 2xl:mb-[200px] container">
+      <section className="mt-[84px] 2xl:mt-[250px] mb-[68px] 2xl:mb-[200px] container" data-aos="fade-up">
         <div className="relative">
           <div className="relative w-full h-[553px] 2xl:h-[512px]">
             <NextImg

@@ -12,13 +12,13 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
   const [activeTab, setActiveTab] = useState("");
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full bg-white z-50 transition-transform duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 w-full h-full bg-white z-50 transition-transform duration-500 ease-in-out ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
       <div className="flex flex-col h-full container relative scrollbar-hide overflow-y-scroll">
         {activeTab == "tab1" && (
-          <div className="absolute top-0 right-0">
+          <div className="absolute top-0 right-0" data-aos="fade-up">
             <div className="relative w-[491px] h-[1342px] bg-center">
               <NextImg
                 src="/assets/image/bg-menu1.jpg"
@@ -29,7 +29,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           </div>
         )}
         {activeTab == "tab2" && (
-          <div className="absolute top-0 right-0">
+          <div className="absolute top-0 right-0" data-aos="fade-up">
             <div className="relative w-[491px] h-[1342px] bg-center">
               <NextImg
                 src="/assets/image/bg-menu2.png"
@@ -40,7 +40,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           </div>
         )}
         {activeTab == "tab3" && (
-          <div className="absolute top-0 right-0">
+          <div className="absolute top-0 right-0" data-aos="fade-up">
             <div className="relative w-[491px] h-[1342px] bg-center">
               <NextImg
                 src="/assets/image/bg-menu3.png"
@@ -51,7 +51,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           </div>
         )}
         {activeTab == "tab4" && (
-          <div className="absolute top-0 right-0">
+          <div className="absolute top-0 right-0" data-aos="fade-up">
             <div className="relative w-[491px] h-[1342px] bg-center">
               <NextImg
                 src="/assets/image/bg-menu4.png"
@@ -90,7 +90,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           onValueChange={setActiveTab}
           className="grid grid-cols-[30%,70%] mt-10 gap-5"
         >
-          <Tabs.List className="flex flex-col justify-self-start gap-4">
+          <Tabs.List className="flex flex-col justify-self-start gap-4" data-aos="fade-up-right">
             <Tabs.Trigger
               value="tab1"
               className={`tab cursor-pointer text-[32px] font-medium leading-[84px] -tracking-[0.96px] text-start ${
@@ -189,7 +189,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
               value="tab1"
               className="tab-content flex flex-col justify-between"
             >
-              <ul className="flex flex-col gap-8">
+              <ul className="flex flex-col gap-8" data-aos="fade-up">
                 <li className="text-[#000] text-2xl font-medium -tracking-[0.72px] leading-[24px] cursor-pointer">
                   Who We Are
                 </li>
@@ -212,7 +212,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                   Why Employee Owned
                 </li>
               </ul>
-              <div className="flex flex-col gap-6 pt-[500px]">
+              <div className="flex flex-col gap-6 pt-[500px]" data-aos="fade-up">
                 <span className="text-[#000] text-2xl font-bold -tracking-[0.72px] leading-[24px]">
                   Who We Are
                 </span>
@@ -229,7 +229,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
               value="tab2"
               className="tab-content flex flex-col justify-between"
             >
-              <ul className="flex flex-col gap-8">
+              <ul className="flex flex-col gap-8" data-aos="fade-up">
                 <li className="text-[#000] text-2xl font-medium -tracking-[0.72px] leading-[24px] cursor-pointer">
                   Our Operation
                 </li>
@@ -240,7 +240,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                   Our Food Factory
                 </li>
               </ul>
-              <div className="flex flex-col gap-6 pt-[700px]">
+              <div className="flex flex-col gap-6 pt-[700px]" data-aos="fade-up">
                 <span className="text-[#000] text-2xl font-bold -tracking-[0.72px] leading-[24px]">
                   What We Do
                 </span>
@@ -271,7 +271,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
               value="tab4"
               className="tab-content flex flex-col justify-between"
             >
-              <ul className="flex flex-col gap-8">
+              <ul className="flex flex-col gap-8" data-aos="fade-up">
                 <li className="text-[#000] text-2xl font-medium -tracking-[0.72px] leading-[24px] cursor-pointer">
                   Tree Planting Project
                 </li>
@@ -288,7 +288,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                   VA Wealth Fund
                 </li>
               </ul>
-              <div className="flex flex-col gap-6 pt-[600px]">
+              <div className="flex flex-col gap-6 pt-[600px]" data-aos="fade-up">
                 <span className="text-[#000] text-2xl font-bold -tracking-[0.72px] leading-[24px]">
                   Our Impact
                 </span>
