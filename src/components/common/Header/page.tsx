@@ -1,6 +1,9 @@
 import NextImg from "../next-img";
 
-export default function Header() {
+interface HeaderProps {
+  toggleMenu: () => void;
+}
+export default function Header({ toggleMenu }:HeaderProps ) {
   return (
     <header className="w-full 2xl:w-[1062px] h-[87px] mx-auto 2xl:mt-16">
       <div className="w-full h-full bg-white 2xl:drop-shadow-xl px-8 2xl:rounded-2xl">
@@ -9,7 +12,7 @@ export default function Header() {
         <div className="hidden 2xl:block relative w-[275px] h-[36px] cursor-pointer">
           <NextImg
             src="/assets/icon/HorizontalLogo.svg"
-            alt="BannerHeader"
+            alt="LogoHeader"
             objectFit="cover"
           />
         </div>
@@ -17,7 +20,7 @@ export default function Header() {
         <div className="block 2xl:hidden relative w-[183px] h-[24px] cursor-pointer">
           <NextImg
             src="/assets/icon/HorizontalLogo.svg"
-            alt="BannerHeader"
+            alt="Header"
             objectFit="cover"
           />
         </div>
@@ -46,13 +49,13 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="relative h-[27px] w-[27px] cursor-pointer">
+          <button className="relative h-[27px] w-[27px]" onClick={toggleMenu}>
             <NextImg
               src="/assets/icon/density_medium.svg"
-              alt="Header"
+              alt="MenuIcon"
               objectFit="cover"
             />
-          </div>
+          </button>
         </div>
       </div>
       </div>

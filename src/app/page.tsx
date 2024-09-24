@@ -1,47 +1,11 @@
 "use client";
 
-import Footer from "@/components/common/Footer/page";
-import Header from "@/components/common/Header/page";
 import NextImg from "@/components/common/next-img";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
+import Slide1 from "@/components/Swiper/Slide1/Slide1";
 
 export default function Home() {
-  const slides = [
-    {
-      id: "01",
-      title: "Crop Consulting",
-      description:
-        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      imageUrl: "/assets/image/Frame 1261154501.png",
-    },
-    {
-      id: "02",
-      title: "Crop Consulting",
-      description:
-        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      imageUrl: "/assets/image/Frame 1261154502.png",
-    },
-    {
-      id: "03",
-      title: "Crop Consulting",
-      description:
-        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      imageUrl: "/assets/image/Frame 1261154503.png",
-    },
-    {
-      id: "04",
-      title: "Crop Consulting",
-      description:
-        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      imageUrl: "/assets/image/Frame 1261154501.png",
-    },
-  ];
   return (
     <div>
-      <Header />
-
       {/* Begin: banner */}
       <section className="container 2xl:mt-[117px]">
         <div className="relative">
@@ -192,163 +156,7 @@ export default function Home() {
             All Benefits
           </button>
         </div>
-        <div className="mt-[60px] 2xl:block hidden">
-          <Swiper
-            spaceBetween={30}
-            slidesPerView={3}
-            grabCursor={true}
-            loop={false}
-            onInit={(swiper) => {
-              const progressBar = document.getElementById(
-                "custom-progress-bar"
-              );
-              const slidesPerView = swiper.params.slidesPerView ?? 1;
-              if (progressBar && typeof slidesPerView === "number") {
-                const totalSlides = swiper.slides.length - slidesPerView + 1;
-                const percentage =
-                  ((swiper.activeIndex + 1) / totalSlides) * 100;
-                progressBar.style.width = `${percentage}%`;
-              }
-              document
-                .getElementById("prevBtn")
-                ?.addEventListener("click", () => swiper.slidePrev());
-              document
-                .getElementById("nextBtn")
-                ?.addEventListener("click", () => swiper.slideNext());
-            }}
-            onSlideChange={(swiper) => {
-              const progressBar = document.getElementById(
-                "custom-progress-bar"
-              );
-              const slidesPerView = swiper.params.slidesPerView ?? 1;
-              if (progressBar && typeof slidesPerView === "number") {
-                const totalSlides = swiper.slides.length - slidesPerView + 1;
-                const percentage =
-                  ((swiper.activeIndex + 1) / totalSlides) * 100;
-                progressBar.style.width = `${percentage}%`;
-              }
-            }}
-          >
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <div className="relative p-7 rounded-lg transition duration-300 cursor-pointer flex flex-col gap-[64px]">
-                  <div className="absolute w-full h-full inset-0 z-0">
-                    <div className="relative w-full h-full rounded-lg">
-                      <NextImg
-                        src={slide.imageUrl}
-                        alt="Village-agriculture"
-                        objectFit="cover"
-                        className="rounded-lg"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex justify-between gap-5 relative z-10">
-                    <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF] mt-1">
-                      {slide.id}
-                    </span>
-                    <h4 className="text-[26px] font-bold leading-[26px] -tracking-[0.78px] text-[#FFF] place-content-end">
-                      {slide.title}
-                    </h4>
-                    <div className="border border-[#FFF] p-3 rounded-full">
-                      <div className="relative w-5 h-5">
-                        <NextImg
-                          src="/assets/icon/north_east.svg"
-                          alt="Village-agriculture"
-                          objectFit="cover"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-[6px] relative z-10">
-                    <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
-                      standard of quality
-                    </span>
-                    <p className="text-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
-                      {slide.description}
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          {/* Custom Progress Bar */}
-          <div className="mt-[65px] flex justify-center items-center">
-            <div className="w-[300px] h-[15px] overflow-hidden border border-[#333]">
-              <div
-                id="custom-progress-bar"
-                className="w-0 h-full bg-[#545454] transition ease-in duration-300"
-              ></div>
-            </div>
-            {/* Nút điều hướng tùy chỉnh */}
-            <div className="custom-navigation ml-[80px] flex items-center gap-6">
-              <button id="prevBtn" className="rounded-full bg-black p-4">
-                <div className="relative w-6 h-6">
-                  <NextImg
-                    src="/assets/icon/arrow_forward.svg"
-                    alt="Village-agriculture"
-                    objectFit="cover"
-                  />
-                </div>
-              </button>
-              <button id="nextBtn" className="rounded-full bg-black p-4">
-                <div className="relative w-6 h-6 rotate-180">
-                  <NextImg
-                    src="/assets/icon/arrow_forward.svg"
-                    alt="Village-agriculture"
-                    objectFit="cover"
-                  />
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="2xl:hidden block mt-[58px]">
-          <div className="flex flex-col gap-5">
-            {slides.map((slide, index) => (
-              <div
-                className="relative p-7 rounded-lg transition duration-300 cursor-pointer flex flex-col gap-[64px]"
-                key={index}
-              >
-                <div className="absolute w-full h-full inset-0 z-0">
-                  <div className="relative w-full h-full rounded-lg">
-                    <NextImg
-                      src={slide.imageUrl}
-                      alt="Village-agriculture"
-                      objectFit="cover"
-                      className="rounded-lg"
-                    />
-                  </div>
-                </div>
-                <div className="flex justify-between gap-5 relative z-10">
-                  <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF] mt-1">
-                    {slide.id}
-                  </span>
-                  <h4 className="text-[26px] font-bold leading-[26px] -tracking-[0.78px] text-[#FFF] place-content-end">
-                    {slide.title}
-                  </h4>
-                  <div className="border border-[#FFF] p-3 rounded-full">
-                    <div className="relative w-5 h-5">
-                      <NextImg
-                        src="/assets/icon/north_east.svg"
-                        alt="Village-agriculture"
-                        objectFit="cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-[6px] relative z-10">
-                  <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
-                    standard of quality
-                  </span>
-                  <p className="text-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
-                    {slide.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Slide1 />
       </section>
 
       <section className="mt-16 2xl:mt-[136px] container">
@@ -964,13 +772,13 @@ export default function Home() {
             </span>
           </div>
           <div className="flex flex-col 2xl:grid grid-cols-3 gap-8 2xl:gap-6 2xl:mt-0 mt-[50px]">
-            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer h-[350px]">
-              <div className="flex justify-between gap-5">
-                <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF] mt-1">
+            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:h-[350px]">
+              <div className="flex justify-between 2xl:items-stretch items-center ">
+                <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   01
                 </span>
                 <h4 className="text-[26px] font-bold leading-[26px] -tracking-[0.78px] text-[#FFF] place-content-end">
-                  Quality Assurxance
+                  Quality Assurance
                 </h4>
                 <div className="border border-[#FFF] p-3 rounded-full">
                   <div className="relative w-5 h-5">
@@ -982,7 +790,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="mt-[106px] flex flex-col gap-[6px]">
+              <div className="mt-11 2xl:mt-[100px] flex flex-col gap-[6px]">
                 <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
                   standard of quality
                 </span>
@@ -993,9 +801,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[83px] h-[350px]">
-              <div className="flex justify-between gap-5">
-                <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF] mt-1">
+            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[83px] 2xl:h-[350px]">
+              <div className="flex justify-between 2xl:items-stretch items-center">
+                <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   02
                 </span>
                 <h4 className="text-[26px] font-bold leading-[26px] -tracking-[0.78px] text-[#FFF] place-content-end">
@@ -1011,7 +819,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="mt-[106px] flex flex-col gap-[6px]">
+              <div className="mt-11 2xl:mt-[100px] flex flex-col gap-[6px]">
                 <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
                   Friendly Farming
                 </span>
@@ -1022,9 +830,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[211px] h-[350px]">
-              <div className="flex justify-between gap-5">
-                <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF] mt-1">
+            <div className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[211px] 2xl:h-[350px]">
+              <div className="flex justify-between 2xl:items-stretch items-center">
+                <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   03
                 </span>
                 <h4 className="text-[26px] font-bold leading-[26px] -tracking-[0.78px] text-[#FFF] place-content-end">
@@ -1040,7 +848,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="mt-[106px] flex flex-col gap-[6px]">
+              <div className="mt-11 2xl:mt-[100px] flex flex-col gap-[6px]">
                 <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
                   Agronomist
                 </span>
@@ -1091,11 +899,11 @@ export default function Home() {
             <form className="relative">
               <input
                 type="text"
-                className="px-8 py-2 bg-[#FFF] text-[#333] text-[18px] font-semibold -tracking-[0.54px] leading-[48px] rounded-full w-full 2xl:w-[410px] placeholder:text-text-[18px] placeholder:font-semibold placeholder:-tracking-[0.54px] placeholder:text-[#333] focus:outline-none"
+                className="px-8 py-2 bg-[#FFF] text-[#333] text-sm 2xl:text-[18px] font-semibold -tracking-[0.54px] leading-[48px] rounded-full w-full 2xl:w-[410px] placeholder:text-sm 2xl:placeholder:text-text-[18px] placeholder:font-semibold placeholder:-tracking-[0.54px] placeholder:text-[#333] focus:outline-none"
                 placeholder="Your email address"
               />
               <button
-                className="px-8 py-2 bg-[#404040] text-[#FFF] text-[18px] font-semibold -tracking-[0.54px] rounded-full absolute right-2 top-1 bottom-1"
+                className="px-8 2xl:py-2 bg-[#404040] text-[#FFF] text-sm 2xl:text-[18px] font-semibold -tracking-[0.54px] rounded-full absolute right-2 top-2 bottom-2"
                 type="submit"
               >
                 Join Now
@@ -1104,7 +912,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }

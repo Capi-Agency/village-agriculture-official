@@ -97,7 +97,8 @@ export default function Footer() {
 
             {/* begin:: quote */}
             <p className="text-[32px] 2xl:text-[48px] text-[#121212] leading-[64px] font-medium">
-              <span className="text-[#545454] font-normal">Reach</span> Out <br />
+              <span className="text-[#545454] font-normal">Reach</span> Out{" "}
+              <br />
               with Villageagriculture
             </p>
             {/* end:: quote */}
@@ -127,30 +128,40 @@ export default function Footer() {
             {/* begin:: social & lang */}
             <div className="w-full flex 2xl:flex-row flex-col justify-between 2xl:mt-0 mt-10 gap-6">
               <div className="flex gap-5 items-center">
-                <Image
-                  src={"/assets/image/footer_socical_1.png"}
-                  alt="social_media_1"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src={"/assets/image/footer_socical_2.png"}
-                  alt="social_media_1"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src={"/assets/image/footer_socical_3.png"}
-                  alt="social_media_1"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src={"/assets/image/footer_socical_4.png"}
-                  alt="social_media_1"
-                  width={40}
-                  height={40}
-                />
+                <div className="relative w-10 h-10">
+                  <NextImg
+                    src="/assets/image/footer_socical_1.png"
+                    alt="social_media"
+                    objectFit="cover"
+                    className=""
+                  />
+                </div>
+                <div className="relative w-10 h-10">
+                  <NextImg
+                    src="/assets/image/footer_socical_2.png"
+                    alt="social_media"
+                    objectFit="cover"
+                    className=""
+                  />
+                </div>
+
+                <div className="relative w-10 h-10">
+                  <NextImg
+                    src="/assets/image/footer_socical_3.png"
+                    alt="social_media"
+                    objectFit="cover"
+                    className=""
+                  />
+                </div>
+
+                <div className="relative w-10 h-10">
+                  <NextImg
+                    src="/assets/image/footer_socical_4.png"
+                    alt="social_media"
+                    objectFit="cover"
+                    className=""
+                  />
+                </div>
               </div>
 
               {/* <div className="p-2 w-48 bg-[#333] rounded-lg flex justify-between items-center">
