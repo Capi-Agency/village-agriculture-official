@@ -1,7 +1,7 @@
 "use client";
 
 import NextImg from "@/components/common/next-img";
-import Slide1 from "@/components/Swiper/Slide1/Slide1";
+import Slide1 from "@/components/Swiper/Slide1/index";
 
 export default function Home() {
   return (

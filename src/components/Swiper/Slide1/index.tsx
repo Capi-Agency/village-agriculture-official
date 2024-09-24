@@ -3,9 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-type Props = {};
-
-const Slide1 = (props: Props) => {
+const Slide1 = () => {
   const slides = [
     {
       id: "01",
