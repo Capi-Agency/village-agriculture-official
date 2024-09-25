@@ -147,7 +147,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
               Our Impact
             </Tabs.Trigger>
           </Tabs.List>
-          <div className="p-6 lg:p-8 xl:p-12 2xl:p-6">
+          <div className="p-6 lg:px-8 xl:px-12 2xl:px-6">
             {/* no active */}
             <Tabs.Content
               value=""
@@ -242,7 +242,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                 <span className="text-[#000] text-2xl font-bold -tracking-[0.72px] leading-[24px]">
                   Who We Are
                 </span>
-                <p className="text-[#000] text-base font-light -tracking-[0.48px] leading-[32px] w-[345px]">
+                <p className="text-[#000] text-base font-light -tracking-[0.48px] leading-[32px] lg:w-[262px] 2xl:w-[345px]">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry&apos;s
                   standard dummy text ever since the 1500s, when an unknown
@@ -273,7 +273,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                 <span className="text-[#000] text-2xl font-bold -tracking-[0.72px] leading-[24px]">
                   What We Do
                 </span>
-                <p className="text-[#000] text-base font-light -tracking-[0.48px] leading-[32px] w-[345px]">
+                <p className="text-[#000] text-base font-light -tracking-[0.48px] leading-[32px] lg:w-[262px] 2xl:w-[345px]">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry&apos;s
                   standard dummy text ever since the 1500s, when an unknown
