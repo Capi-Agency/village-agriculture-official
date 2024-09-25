@@ -10,13 +10,33 @@ interface MenuProps {
 
 const Menu = ({ isOpen, onClose }: MenuProps) => {
   const [activeTab, setActiveTab] = useState("");
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isWhatWeDoOpen, setIsWhatWeDoOpen] = useState(false);
+  const [isOurBrandsOpen, setIsOurBrandsOpen] = useState(false);
+  const [isOurImpactOpen, setIsOurImpactOpen] = useState(false);
+
+  const toggleAboutMenu = () => {
+    setIsAboutOpen((prev) => !prev);
+  };
+
+  const toggleWhatWeDoMenu = () => {
+    setIsWhatWeDoOpen((prev) => !prev);
+  };
+
+  const toggleOurBrandsMenu = () => {
+    setIsOurBrandsOpen((prev) => !prev);
+  };
+
+  const toggleOurImpactMenu = () => {
+    setIsOurImpactOpen((prev) => !prev);
+  };
   return (
     <div
       className={`fixed top-0 left-0 w-full h-full bg-white z-50 transition-transform duration-500 ease-in-out ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
-      <div className="flex flex-col h-full container relative scrollbar-hide overflow-y-scroll">
+      <div className="xl:flex flex-col h-full container relative scrollbar-hide overflow-y-scroll hidden">
         {activeTab == "tab1" && (
           <div className="absolute top-0 right-0" data-aos="fade-up">
             <div className="relative w-[491px] h-[1342px] bg-center">
@@ -90,7 +110,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           onValueChange={setActiveTab}
           className="grid grid-cols-[30%,70%] mt-10 gap-5"
         >
-          <Tabs.List className="flex flex-col justify-self-start gap-4" data-aos="fade-up-right">
+          <Tabs.List
+            className="flex flex-col justify-self-start gap-4"
+            data-aos="fade-up-right"
+          >
             <Tabs.Trigger
               value="tab1"
               className={`tab cursor-pointer text-[32px] font-medium leading-[84px] -tracking-[0.96px] text-start ${
@@ -212,7 +235,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                   Why Employee Owned
                 </li>
               </ul>
-              <div className="flex flex-col gap-6 pt-[500px]" data-aos="fade-up">
+              <div
+                className="flex flex-col gap-6 pt-[500px]"
+                data-aos="fade-up"
+              >
                 <span className="text-[#000] text-2xl font-bold -tracking-[0.72px] leading-[24px]">
                   Who We Are
                 </span>
@@ -240,7 +266,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                   Our Food Factory
                 </li>
               </ul>
-              <div className="flex flex-col gap-6 pt-[700px]" data-aos="fade-up">
+              <div
+                className="flex flex-col gap-6 pt-[700px]"
+                data-aos="fade-up"
+              >
                 <span className="text-[#000] text-2xl font-bold -tracking-[0.72px] leading-[24px]">
                   What We Do
                 </span>
@@ -288,7 +317,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                   VA Wealth Fund
                 </li>
               </ul>
-              <div className="flex flex-col gap-6 pt-[600px]" data-aos="fade-up">
+              <div
+                className="flex flex-col gap-6 pt-[600px]"
+                data-aos="fade-up"
+              >
                 <span className="text-[#000] text-2xl font-bold -tracking-[0.72px] leading-[24px]">
                   Our Impact
                 </span>
@@ -303,6 +335,144 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
             </Tabs.Content>
           </div>
         </Tabs.Root>
+      </div>
+
+      {/* menu mobile */}
+      <div className="flex flex-col h-full container relative scrollbar-hide overflow-y-scroll pb-6">
+        <div className="flex items-center justify-between mt-16">
+          <div className="relative w-[183px] h-[24px] cursor-pointer">
+            <NextImg
+              src="/assets/icon/HorizontalLogo.svg"
+              alt="BannerHeader"
+              objectFit="cover"
+            />
+          </div>
+          <button onClick={onClose}>
+            <div className="relative w-[27px] h-[27px]">
+              <NextImg
+                src="/assets/icon/close_black.svg"
+                alt="Village-agriculture"
+                objectFit="cover"
+              />
+            </div>
+          </button>
+        </div>
+        <div className="flex flex-col gap-10 mt-10">
+          <div>
+            <div
+              className="text-[#898989] text-2xl font-medium -tracking-[0.72px] cursor-pointer"
+              onClick={toggleAboutMenu}
+            >
+              About Us
+            </div>
+            {isAboutOpen && (
+              <ul className="flex flex-col gap-8 mt-8">
+                <li className="text-[#000] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Who We Are
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Our Story
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Our Vision & Our Mission
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Our Dream & Our Belief
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Our Vision & Our Mission
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Our Name
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Our Amazing Food Factory
+                </li>
+              </ul>
+            )}
+          </div>
+          <div>
+            <div
+              className="text-[#898989] text-2xl font-medium -tracking-[0.72px] cursor-pointer"
+              onClick={toggleWhatWeDoMenu}
+            >
+              What We Do
+            </div>
+            {isWhatWeDoOpen && (
+              <ul className="flex flex-col gap-8 mt-8">
+                <li className="text-[#000] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Our Operation
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Our Products
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Our Food Factory
+                </li>
+              </ul>
+            )}
+          </div>
+          <div>
+            <div
+              className="text-[#898989] text-2xl font-medium -tracking-[0.72px] cursor-pointer"
+              onClick={toggleOurBrandsMenu}
+            >
+              Our Brand
+            </div>
+            {isOurBrandsOpen && (
+              <ul className="flex flex-col gap-8 mt-8">
+                <li className="text-[#000] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Lorem Ipsum
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Lorem Ipsum
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Lorem Ipsum
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Lorem Ipsum
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Lorem Ipsum
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Lorem Ipsum
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Lorem Ipsum
+                </li>
+              </ul>
+            )}
+          </div>
+          <div>
+            <div
+              className="text-[#898989] text-2xl font-medium -tracking-[0.72px] cursor-pointer"
+              onClick={toggleOurImpactMenu}
+            >
+              Our Impact
+            </div>
+            {isOurImpactOpen && (
+              <ul className="flex flex-col gap-8 mt-8">
+                <li className="text-[#000] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Tree Planting Project
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Education Projects
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Community Engagment
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  House of Food Campus - Project
+                </li>
+                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
+                  Our Vision & Our Mission
+                </li>
+              </ul>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

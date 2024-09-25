@@ -30,6 +30,7 @@ export default function RootLayout({
   }, []);
   return (
     <html lang="en">
+      <link rel="icon" href="/assets/icon/logo.svg" />
       <body
       >
          <Header toggleMenu={toggleMenu}/>

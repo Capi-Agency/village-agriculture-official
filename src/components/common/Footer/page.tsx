@@ -83,9 +83,9 @@ export default function Footer() {
       {/* begin:: main footer */}
       <div className="container" data-aos="fade-up">
         <div className="w-full min-h-[300px] flex 2xl:flex-row flex-col gap-10 mb-10">
-          <div className="md:w-[50%] w-full flex flex-col justify-between gap-12 2xl:gap-20">
+          <div className="2xl:w-[50%] w-full lg:w-full flex flex-col md:flex-row 2xl:flex-col justify-between gap-12 2xl:gap-20">
             {/* begin:: logo */}
-            <div className="relative w-[250px] 2xl:w-[498px] h-[92px] 2xl:h-[184px] cursor-pointer 2xl:mx-0 mx-auto ">
+            <div className="relative w-[250px] lg:w-[370px] lg:h-[138px] 2xl:w-[498px] h-[92px] 2xl:h-[184px] cursor-pointer md:mx-0 mx-auto">
               <NextImg
                 src="/assets/image/logo-ft.png"
                 alt="Logo-Footer"
@@ -95,16 +95,16 @@ export default function Footer() {
             {/* end:: logo */}
 
             {/* begin:: quote */}
-            <p className="text-[32px] 2xl:text-[48px] text-[#121212] leading-[64px] font-medium">
-              <span className="text-[#545454] font-normal">Reach</span> Out{" "}
+            <p className="text-[32px] 2xl:text-[48px] text-[#121212] leading-[64px] font-medium lg:place-self-end 2xl:place-self-auto lg:leading-[44px]">
+              <span className="text-[#545454] font-normal">Reach</span> Out
               <br />
               with Villageagriculture
             </p>
             {/* end:: quote */}
           </div>
-          <div className="md:w-[50%] w-full flex flex-col justify-between 2xl:mt-20 mt-0">
+          <div className="lg:w-[70%] 2xl:w-[50%] w-full flex flex-col justify-between 2xl:mt-20 mt-0">
             {/* begin:: links */}
-            <div className="w-full 2xl:flex 2xl:justify-between grid grid-cols-2 gap-6">
+            <div className="w-full lg:flex lg:justify-between grid grid-cols-2 gap-6">
               {linksData.map((linkGroup, index) => {
                 return (
                   <div key={index}>
@@ -125,7 +125,7 @@ export default function Footer() {
             {/* end:: links */}
 
             {/* begin:: social & lang */}
-            <div className="w-full flex 2xl:flex-row flex-col justify-between 2xl:mt-0 mt-10 gap-6">
+            <div className="w-full flex lg:flex-row flex-col justify-between 2xl:mt-0 mt-10 gap-6">
               <div className="flex gap-5 items-center">
                 <div className="relative w-10 h-10">
                   <NextImg
@@ -188,8 +188,8 @@ export default function Footer() {
       {/* end:: main footer */}
 
       {/*begin:: copyright */}
-      <div className="bg-[#333] 2xl:py-12">
-        <div className="container flex 2xl:flex-row flex-col justify-between 2xl:gap-0 gap-10 2xl:p-0 p-6">
+      <div className="bg-[#333] lg:py-8">
+        <div className="container flex lg:flex-row flex-col justify-between 2xl:gap-0 gap-10 p-6">
           <p className="font-normal text-white text-base inline-block">
             © Copyright 2024 villageagriculture. All Right Reserved
           </p>

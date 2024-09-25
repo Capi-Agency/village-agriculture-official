@@ -36,10 +36,17 @@ const Slide1 = () => {
   ];
   return (
     <>
-      <div className="mt-[60px] 2xl:block hidden ">
+      <div className="mt-[60px] lg:block hidden ">
         <Swiper
           spaceBetween={30}
-          slidesPerView={3}
+          breakpoints={{
+            1440: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 2.5,
+            },
+          }}
           grabCursor={true}
           loop={false}
           onInit={(swiper) => {
@@ -141,7 +148,7 @@ const Slide1 = () => {
           </div>
         </div>
       </div>
-      <div className="2xl:hidden block mt-[58px]">
+      <div className="lg:hidden block mt-[58px]">
         <div className="flex flex-col gap-5">
           {slides.map((slide, index) => (
             <div
@@ -158,11 +165,11 @@ const Slide1 = () => {
                   />
                 </div>
               </div>
-              <div className="flex justify-between gap-5 relative z-10">
+              <div className="flex justify-between lg:items-stretch items-center gap-5 relative z-10">
                 <span className="text-[20px] font-light leading-[26px] -tracking-[0.6px] text-[#FFF] mt-1">
                   {slide.id}
                 </span>
-                <h4 className="text-[26px] font-bold leading-[26px] -tracking-[0.78px] text-[#FFF] place-content-end">
+                <h4 className="text-[26px] font-bold leading-[26px] -tracking-[0.78px] text-[#FFF] 2xl:place-content-end">
                   {slide.title}
                 </h4>
                 <div className="border border-[#FFF] p-3 rounded-full">
