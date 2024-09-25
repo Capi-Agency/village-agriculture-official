@@ -32,14 +32,14 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
   };
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full bg-white z-50 transition-transform duration-500 ease-in-out ${
+      className={`fixed top-0 left-0 w-full h-full bg-white z-50 transition-transform duration-500 ease-in-out overflow-hidden ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
-      <div className="xl:flex flex-col h-full container relative scrollbar-hide overflow-y-scroll hidden">
+      <div className="lg:flex flex-col h-full container relative scrollbar-hide overflow-y-scroll hidden">
         {activeTab == "tab1" && (
           <div className="absolute top-0 right-0" data-aos="fade-up">
-            <div className="relative w-[491px] h-[1342px] bg-center">
+            <div className="relative lg:w-[345px] 2xl:w-[491px] h-[1342px] bg-center">
               <NextImg
                 src="/assets/image/bg-menu1.jpg"
                 alt="bg-menu1"
@@ -50,7 +50,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
         )}
         {activeTab == "tab2" && (
           <div className="absolute top-0 right-0" data-aos="fade-up">
-            <div className="relative w-[491px] h-[1342px] bg-center">
+            <div className="relative lg:w-[345px] 2xl:w-[491px] h-[1342px] bg-center">
               <NextImg
                 src="/assets/image/bg-menu2.png"
                 alt="bg-menu1"
@@ -61,7 +61,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
         )}
         {activeTab == "tab3" && (
           <div className="absolute top-0 right-0" data-aos="fade-up">
-            <div className="relative w-[491px] h-[1342px] bg-center">
+            <div className="relative lg:w-[345px] 2xl:w-[491px] h-[1342px] bg-center">
               <NextImg
                 src="/assets/image/bg-menu3.png"
                 alt="bg-menu1"
@@ -72,7 +72,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
         )}
         {activeTab == "tab4" && (
           <div className="absolute top-0 right-0" data-aos="fade-up">
-            <div className="relative w-[491px] h-[1342px] bg-center">
+            <div className="relative lg:w-[345px] 2xl:w-[491px] h-[1342px] bg-center">
               <NextImg
                 src="/assets/image/bg-menu4.png"
                 alt="bg-menu1"
@@ -82,7 +82,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           </div>
         )}
         <div className="flex items-center justify-between mt-16">
-          <div className="relative w-[367px] h-[48px] cursor-pointer">
+          <div className="relative lg:w-[283px] lg:h-[37px] 2xl:w-[367px] 2xl:h-[48px] cursor-pointer">
             <NextImg
               src="/assets/icon/HorizontalLogo.svg"
               alt="BannerHeader"
@@ -90,7 +90,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
             />
           </div>
           <button onClick={onClose}>
-            <div className="relative w-[72px] h-[72px]">
+            <div className="relative lg:w-[55px] lg:h-[55px] 2xl:w-[72px] 2xl:h-[72px]">
               <NextImg
                 src={
                   activeTab == ""
@@ -104,7 +104,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           </button>
         </div>
         {/* line */}
-        <div className="absolute top-0 left-1/3 bg-[#898989] w-[1px] h-[1342px] -translate-x-1/3"></div>
+        <div className="absolute top-0 lg:left-[35%] 2xl:left-1/3 bg-[#898989] w-[1px] h-[1342px] -translate-x-1/3 "></div>
         <Tabs.Root
           value={activeTab}
           onValueChange={setActiveTab}
@@ -147,13 +147,13 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
               Our Impact
             </Tabs.Trigger>
           </Tabs.List>
-          <div className="p-6">
+          <div className="p-6 lg:p-8 xl:p-12 2xl:p-6">
             {/* no active */}
             <Tabs.Content
               value=""
               className="tab-content flex flex-col justify-between"
             >
-              <div className="grid grid-cols-2 gap-6 border-b border-[#545454] pb-11 mb-20 w-[80%] place-self-end">
+              <div className="grid grid-cols-2 gap-6 border-b border-[#545454] pb-11 mb-20 lg:w-[90%] 2xl:w-[80%] place-self-end">
                 <div className="flex flex-col justify-between">
                   <span className="text-[#000] text-base font-medium -tracking-[0.48px] leading-[24px] mt-3">
                     Lorem Ipsum is simply dummy text of the printing and
@@ -171,7 +171,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-6 border-b border-[#545454] pb-11 mb-20 w-[80%] place-self-end">
+              <div className="grid grid-cols-2 gap-6 border-b border-[#545454] pb-11 mb-20 lg:w-[90%] 2xl:w-[80%] place-self-end">
                 <div className="flex flex-col justify-between">
                   <span className="text-[#000] text-base font-medium -tracking-[0.48px] leading-[24px] mt-3">
                     Lorem Ipsum is simply dummy text of the printing and
@@ -189,7 +189,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-6 border-b border-[#545454] pb-11 mb-20 w-[80%] place-self-end">
+              <div className="grid grid-cols-2 gap-6 border-b border-[#545454] pb-11 mb-20 lg:w-[90%] 2xl:w-[80%] place-self-end">
                 <div className="flex flex-col justify-between">
                   <span className="text-[#000] text-base font-medium -tracking-[0.48px] leading-[24px] mt-3">
                     Lorem Ipsum is simply dummy text of the printing and
@@ -287,7 +287,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                 <span className="text-[#000] text-2xl font-bold -tracking-[0.72px] leading-[24px]">
                   Our Brands
                 </span>
-                <p className="text-[#000] text-base font-light -tracking-[0.48px] leading-[32px] w-[345px]">
+                <p className="text-[#000] text-base font-light -tracking-[0.48px] leading-[32px] w-[262px] 2xl:w-[345px]">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry&apos;s
                   standard dummy text ever since the 1500s, when an unknown
@@ -300,7 +300,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
               value="tab4"
               className="tab-content flex flex-col justify-between"
             >
-              <ul className="flex flex-col gap-8" data-aos="fade-up">
+              <ul className="flex flex-col gap-8 2xl:w-full lg:w-[262px]" data-aos="fade-up">
                 <li className="text-[#000] text-2xl font-medium -tracking-[0.72px] leading-[24px] cursor-pointer">
                   Tree Planting Project
                 </li>
@@ -324,7 +324,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                 <span className="text-[#000] text-2xl font-bold -tracking-[0.72px] leading-[24px]">
                   Our Impact
                 </span>
-                <p className="text-[#000] text-base font-light -tracking-[0.48px] leading-[32px] w-[345px]">
+                <p className="text-[#000] text-base font-light -tracking-[0.48px] leading-[32px] lg:w-[262px] 2xl:w-[345px]">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry&apos;s
                   standard dummy text ever since the 1500s, when an unknown

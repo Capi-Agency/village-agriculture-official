@@ -26,6 +26,13 @@ const SlideUser = () => {
         "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
       imageUrl: "/assets/image/user3.png",
     },
+    {
+      name: "Mr. Joshep Canavi",
+      position: "Community Manager",
+      description:
+        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      imageUrl: "/assets/image/user1.png",
+    },
   ];
   return (
     <>
