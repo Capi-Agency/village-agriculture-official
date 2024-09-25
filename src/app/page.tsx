@@ -841,7 +841,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col 2xl:grid grid-cols-3 gap-8 2xl:gap-6 2xl:mt-0 mt-[50px]">
             <div
-              className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer lg:h-[350px] w-auto lg:w-[410px]"
+              className="p-7 rounded-lg lg:bg-[#545454] bg-[#333] lg:hover:bg-[#333] transition duration-300 cursor-pointer lg:h-[350px] w-auto lg:w-[410px]"
               data-aos="fade-up"
             >
               <div className="flex justify-between lg:items-stretch items-center ">
@@ -873,7 +873,7 @@ export default function Home() {
               </div>
             </div>
             <div
-              className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[83px] lg:h-[350px] w-auto lg:w-[410px] lg:mx-auto"
+              className="p-7 rounded-lg lg:bg-[#545454] bg-[#333] lg:hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[83px] lg:h-[350px] w-auto lg:w-[410px] lg:mx-auto"
               data-aos="fade-up"
             >
               <div className="flex justify-between lg:items-stretch items-center">
@@ -905,7 +905,7 @@ export default function Home() {
               </div>
             </div>
             <div
-              className="p-7 rounded-lg bg-[#545454] hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[211px] lg:h-[350px] w-auto lg:w-[410px] place-self-end"
+              className="p-7 rounded-lg lg:bg-[#545454] bg-[#333] lg:hover:bg-[#333] transition duration-300 cursor-pointer 2xl:mt-[211px] lg:h-[350px] w-auto lg:w-[410px] place-self-end"
               data-aos="fade-up"
             >
               <div className="flex justify-between lg:items-stretch items-center">
