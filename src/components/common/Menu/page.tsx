@@ -339,7 +339,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
 
       {/* menu mobile */}
       <div className="flex flex-col h-full container relative scrollbar-hide overflow-y-scroll pb-6">
-        <div className="flex items-center justify-between mt-16">
+        <div className="flex items-center justify-between mt-8">
           <div className="relative w-[183px] h-[24px] cursor-pointer">
             <NextImg
               src="/assets/icon/HorizontalLogo.svg"
