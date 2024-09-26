@@ -897,7 +897,7 @@ export default function Home() {
                 <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
                   Friendly Farming
                 </span>
-                <p className="text-base lg:text-xltext-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
+                <p className="text-base lg:text-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   We are committed to sustainable and eco-friendly farming
                   practice, aiming to contribute to healthier planet and more
                   resilient agriculture industry.
@@ -929,7 +929,7 @@ export default function Home() {
                 <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
                   Agronomist
                 </span>
-                <p className="text-base lg:text-xltext-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
+                <p className="text-base lg:text-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   Benefit from the expertise of our seasoned agronomist and
                   specialists who are dedicated to supporting your farming
                   success.

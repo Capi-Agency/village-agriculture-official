@@ -95,7 +95,7 @@ const SlideUser = () => {
               <span className="text-sm -tracking-[0.42px] leading-[26px] mt-6 2xl:mt-11 mb-[6px]">
                 {user.position}
               </span>
-              <p className="text-xl -tracking-[0.6px]  leading-[150%] font-light ">
+              <p className="text-base -tracking-[0.6px]  leading-[150%] font-light ">
                 {user.description}
               </p>
             </div>

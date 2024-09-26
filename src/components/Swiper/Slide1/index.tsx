@@ -148,6 +148,8 @@ const Slide1 = () => {
           </div>
         </div>
       </div>
+
+      {/* mobile */}
       <div className="lg:hidden block mt-[58px]">
         <div className="flex flex-col gap-5">
           {slides.map((slide, index) => (
@@ -186,7 +188,7 @@ const Slide1 = () => {
                 <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
                   standard of quality
                 </span>
-                <p className="text-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
+                <p className="text-base font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   {slide.description}
                 </p>
               </div>
