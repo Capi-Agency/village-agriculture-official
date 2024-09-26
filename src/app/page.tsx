@@ -178,7 +178,7 @@ export default function Home() {
             practice have become a cornerstone for ensuring
           </p>
           <button
-            className="self-start text-xs lg:text-[16px] 2xl:text-2xl -tracking-[0.72px] font-semibold text-[#FFF] px-7 lg:px-5 2xl:px-16 bg-[#545454] rounded-full h-10 lg:h-10 2xl:h-20"
+            className="self-start text-sm lg:text-[16px] 2xl:text-2xl -tracking-[0.72px] font-semibold text-[#FFF] px-7 lg:px-5 2xl:px-16 bg-[#545454] rounded-full h-10 lg:h-10 2xl:h-20"
             data-aos="fade-up"
           >
             All Benefits
@@ -686,15 +686,15 @@ export default function Home() {
                       className="rounded-lg"
                     />
                   </div>
-                  <p className="text-[32px] -tracking-[0.96px] font-medium leading-[44px] text-[#545454] mt-[35px] 2xl:mt-[44px] mb-4">
+                  <p className="text-[24px] lg:text-[32px] -tracking-[0.96px] font-medium leading-[44px] text-[#545454] mt-7 2xl:mt-[44px] mb-3">
                     Lorem Ipsum is simply dummy text of the printing
                   </p>
-                  <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
+                  <p className="text-base lg:text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
                     industry&apos;s standard dummy text ever since the 1500s
                   </p>
-                  <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-8 lg:mt-[136px]">
+                  <button className="underline text-base lg:text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-8 lg:mt-[136px]">
                     Learn More
                   </button>
                 </div>
@@ -707,15 +707,15 @@ export default function Home() {
                       className="rounded-lg"
                     />
                   </div>
-                  <p className="text-[32px] -tracking-[0.96px] font-medium leading-[44px] text-[#545454] mt-[35px] 2xl:mt-[44px] mb-4">
+                  <p className="text-[24px] lg:text-[32px] -tracking-[0.96px] font-medium leading-[44px] text-[#545454] mt-7 2xl:mt-[44px] mb-3">
                     Lorem Ipsum is simply dummy text of the printing
                   </p>
-                  <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
+                  <p className="text-[16px] lg:text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
                     industry&apos;s standard dummy text ever since the 1500s
                   </p>
-                  <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-8 2xl:mt-[53px]">
+                  <button className="underline text-base lg:text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-8 2xl:mt-[53px]">
                     Learn More
                   </button>
                 </div>
@@ -733,15 +733,15 @@ export default function Home() {
                       className="rounded-lg"
                     />
                   </div>
-                  <p className="text-[32px] -tracking-[0.96px] font-medium leading-[44px] text-[#545454] mt-[35px] 2xl:mt-[44px] mb-4">
+                  <p className="text-[24px] lg:text-[32px] -tracking-[0.96px] font-medium leading-[44px] text-[#545454] mt-7 2xl:mt-[44px] mb-3">
                     Lorem Ipsum is simply dummy text of the printing
                   </p>
-                  <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
+                  <p className="text-[16px] lg:text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
                     industry&apos;s standard dummy text ever since the 1500s
                   </p>
-                  <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-8 lg:mt-[136px]">
+                  <button className="underline text-base lg:text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-8 lg:mt-[136px]">
                     Learn More
                   </button>
                 </div>
@@ -754,15 +754,15 @@ export default function Home() {
                       className="rounded-lg"
                     />
                   </div>
-                  <p className="text-[32px] -tracking-[0.96px] font-medium leading-[44px] text-[#545454] mt-[35px] 2xl:mt-[44px] mb-4">
+                  <p className="text-[24px] lg:text-[32px] -tracking-[0.96px] font-medium leading-[44px] text-[#545454] mt-7 2xl:mt-[44px] mb-3">
                     Lorem Ipsum is simply dummy text of the printing
                   </p>
-                  <p className="text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
+                  <p className="text-[16px] lg:text-[24px] -tracking-[0.72px]  leading-[32px] text-[#545454] font-light">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
                     industry&apos;s standard dummy text ever since the 1500s
                   </p>
-                  <button className="underline text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-8 2xl:mt-[53px]">
+                  <button className="underline text-base lg:text-[24px] -tracking-[0.72px] font-semibold leading-[32px] text-[#545454] mt-8 2xl:mt-[53px]">
                     Learn More
                   </button>
                 </div>
@@ -865,7 +865,7 @@ export default function Home() {
                 <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
                   standard of quality
                 </span>
-                <p className="text-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
+                <p className="text-base lg:text-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   Our products and service meet the highest standards of
                   quality. ensuring a reliable and consistent experience for our
                   customers.
@@ -897,7 +897,7 @@ export default function Home() {
                 <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
                   Friendly Farming
                 </span>
-                <p className="text-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
+                <p className="text-base lg:text-xltext-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   We are committed to sustainable and eco-friendly farming
                   practice, aiming to contribute to healthier planet and more
                   resilient agriculture industry.
@@ -929,7 +929,7 @@ export default function Home() {
                 <span className="text-sm leading-[26px] -tracking-[0.42px] text-[#FFF]">
                   Agronomist
                 </span>
-                <p className="text-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
+                <p className="text-base lg:text-xltext-xl font-light leading-[26px] -tracking-[0.6px] text-[#FFF]">
                   Benefit from the expertise of our seasoned agronomist and
                   specialists who are dedicated to supporting your farming
                   success.
@@ -960,7 +960,7 @@ export default function Home() {
                 Cultivating Communities
               </span>
             </div>
-            <button className="px-7 lg:py-0 py-3 lg:h-[41px] bg-[#545454] text-[#FFF] font-semibold -tracking-[0.54px] rounded-full 2xl:hidden block mt-[47px] lg:mt-0 lg:mx-0 mx-auto">
+            <button className="px-7 lg:py-0 py-3 text-sm lg:h-10 bg-[#545454] text-[#FFF] font-semibold -tracking-[0.54px] rounded-full 2xl:hidden block mt-[47px] lg:mt-0 lg:mx-0 mx-auto">
               All Benefits
             </button>
           </div>
