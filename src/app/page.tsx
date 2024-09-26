@@ -987,7 +987,7 @@ export default function Home() {
             <form className="relative">
               <input
                 type="text"
-                className="px-8 py-2 bg-[#FFF] text-[#333] text-sm 2xl:text-[18px] font-semibold -tracking-[0.54px] leading-[48px] rounded-full w-full 2xl:w-[410px] placeholder:text-sm 2xl:placeholder:text-[18px] placeholder:font-semibold placeholder:-tracking-[0.54px] placeholder:text-[#333] focus:outline-none"
+                className="px-8 py-2 bg-[#FFF] text-[#545454] lg:text-[#333] text-sm 2xl:text-[18px] font-semibold -tracking-[0.54px] leading-[48px] rounded-full w-full 2xl:w-[410px] placeholder:text-sm 2xl:placeholder:text-[18px] placeholder:font-semibold placeholder:-tracking-[0.54px] placeholder:text-[#545454] lg:placeholder:text-[#333] focus:outline-none"
                 placeholder="Your email address"
               />
               <button

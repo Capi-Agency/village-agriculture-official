@@ -163,23 +163,36 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* <div className="p-2 w-48 bg-[#333] rounded-lg flex justify-between items-center">
-                <p className="text-white font-semibold text-lg">English</p>
-                <Image
-                  src={"/assets/image/footer_lang.png"}
-                  alt="lang"
-                  width={24}
-                  height={24}
-                />
-              </div> */}
-              <select
-                name=""
-                id=""
-                className="pl-10 w-48 bg-[#333] font-semibold rounded-lg flex justify-between items-center text-white 2xl:py-0 py-1"
-              >
-                <option value="">English - En</option>
-                <option value="">Vietnamese</option>
-              </select>
+              <div className="relative w-48 rounded-lg">
+                <div className="absolute top-1/2 left-4 -translate-y-1/2">
+                  <div className="relative w-5 h-5">
+                    <NextImg
+                      src="/assets/icon/android-globe.svg"
+                      alt="android-globe"
+                      objectFit="cover"
+                      className="chevron-down"
+                    />
+                  </div>
+                </div>
+                <select className="appearance-none block w-full rounded-md h-10 pl-12 text-[#FFF] font-semibold focus:outline-none bg-[#333] cursor-pointer leading-normal">
+                  <option value="1" className="cursor-pointer">
+                    English - En
+                  </option>
+                  <option value="2" className="cursor-pointer">
+                    Vietnamese
+                  </option>
+                </select>
+                <div className="absolute top-1/2 right-4 -translate-y-1/2 flex items-center pointer-events-none">
+                  <div className="relative w-[15px] h-2">
+                    <NextImg
+                      src="/assets/icon/chevron-down.svg"
+                      alt="chevron-down"
+                      objectFit="cover"
+                      className=""
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
             {/* end:: social & lang */}
           </div>

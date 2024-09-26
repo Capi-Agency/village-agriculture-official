@@ -26,8 +26,8 @@ export default function Header({ toggleMenu }: HeaderProps) {
             </div>
 
             <div className="flex items-center gap-10">
-              <div className="relative hidden lg:inline-block min-w-[50px]">
-                <select className="appearance-none block w-full rounded-md h-[50px] pl-5 pr-5 text-[#000] font-semibold leading-[36px] text-sm focus:outline-none bg-transparent cursor-pointer">
+              <div className="relative hidden lg:flex min-w-[50px] items-center">
+                <select className="appearance-none block w-full rounded-md h-[36px] pl-5 pr-5 text-[#000] font-semibold leading-[36px] text-sm focus:outline-none bg-transparent cursor-pointer">
                   <option value="1" className="cursor-pointer">
                     Eng
                   </option>
@@ -35,21 +35,14 @@ export default function Header({ toggleMenu }: HeaderProps) {
                     Vie
                   </option>
                 </select>
-                <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                  <svg
-                    className="w-[18px] h-[18px] text-[#000]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M7 10l5 5 5-5"
+                <div className="absolute top-[10px] left-0 flex items-center pointer-events-none">
+                  <div className="relative w-[18px] h-[18px]">
+                    <NextImg
+                      src="/assets/icon/expand_more.svg"
+                      alt="Header"
+                      objectFit="cover"
                     />
-                  </svg>
+                  </div>
                 </div>
               </div>
 

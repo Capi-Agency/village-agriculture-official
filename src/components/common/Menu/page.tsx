@@ -33,7 +33,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
   return (
     <div
       className={`fixed top-0 left-0 w-full h-full bg-white z-50 transition-transform duration-500 ease-in-out overflow-hidden ${
-        isOpen ? "translate-x-0" : "-translate-x-full"
+        isOpen ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="lg:flex flex-col h-full container relative scrollbar-hide overflow-y-scroll hidden">
