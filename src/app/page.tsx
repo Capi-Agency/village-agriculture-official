@@ -163,7 +163,7 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="mt-8 lg:mt-[110px] 2xl:mt-[136px] flex flex-col gap-5 2xl:gap-0 lg:grid lg:grid-cols-[30%,40%,20%] 2xl:grid-cols-[30%,40%,20%] justify-between">
+        <div className="mt-8 lg:mt-[110px] 2xl:mt-[136px] flex flex-col gap-5 2xl:gap-0 lg:grid lg:grid-cols-[30%,40%,15%] 2xl:grid-cols-[30%,40%,20%] justify-between">
           <span
             className="text-[24px] lg:text-[44px] 2xl:text-[64px] font-bold -tracking-[1.92px] text-[#545454]"
             data-aos="fade-up"
@@ -178,7 +178,7 @@ export default function Home() {
             practice have become a cornerstone for ensuring
           </p>
           <button
-            className="self-start text-xs lg:text-2xl -tracking-[0.72px] font-semibold text-[#FFF] px-7 lg:px-8 2xl:px-16 lg:py-4 bg-[#545454] rounded-full h-10 lg:h-16 2xl:h-20"
+            className="self-start text-xs lg:text-[16px] 2xl:text-2xl -tracking-[0.72px] font-semibold text-[#FFF] px-7 lg:px-5 2xl:px-16 bg-[#545454] rounded-full h-10 lg:h-10 2xl:h-20"
             data-aos="fade-up"
           >
             All Benefits
