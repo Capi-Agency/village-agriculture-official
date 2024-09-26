@@ -20,7 +20,7 @@ export default function Home() {
             />
           </div>
 
-          <p className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[55%] flex items-center justify-center text-2xl md:text-[48px] 2xl:text-[72px] font-bold -tracking-wide text-white mx-auto text-center md:leading-[64px] 2xl:leading-[1.15]">
+          <p className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[55%] xl:w-[50%] 2xl:w-[60%] flex items-center justify-center text-2xl md:text-[48px] 2xl:text-[72px] font-bold -tracking-wide text-white mx-auto text-center md:leading-[64px] 2xl:leading-[1.15]">
             Discover the Cutting - Edge World of Modern Agriculture
           </p>
 
