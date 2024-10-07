@@ -1,7 +1,9 @@
 "use client";
 
 import NextImg from "@/components/common/next-img";
+import Section from "@/components/common/Section";
 import Slide1 from "@/components/Swiper/Slide1/index";
+import Slide2 from "@/components/Swiper/Slide2";
 import SlideUser from "@/components/Swiper/SlideUser";
 import CountUp from "react-countup";
 
@@ -132,36 +134,10 @@ export default function Home() {
         >
           Rooted in Tradition, <br /> Growing for the Future
         </h1>
-
-        <div
-          className="flex items-center justify-between gap-4 2xl:gap-8 mt-16 lg:mt-[110px] 2xl:mt-[136px]"
-          data-aos="fade-up"
-        >
-          <span className="text-[24px] 2xl:text-[32px] text-[#545454] font-medium">
-            Mission
-          </span>
-
-          <div className="flex-1 flex items-center">
-            <div className="bg-[#333] h-[1px] 2xl:h-[2px] w-full"></div>
-          </div>
-
-          <div className="relative w-[180px] lg:w-[360px] pt-[10%] lg:pt-[8%]">
-            <NextImg
-              src="/assets/icon/HorizontalLogo.svg"
-              alt="BannerHeader"
-              objectFit="contain"
-              className="absolute top-0 left-0"
-            />
-          </div>
-
-          <div className="hidden 2xl:flex flex-1 items-center">
-            <div className="bg-[#333] h-[1px] 2xl:h-[2px] w-full"></div>
-          </div>
-
-          <span className="hidden 2xl:block text-[32px] -tracking-[1px] text-[#545454] leading-[140%]">
-            © 2024
-          </span>
-        </div>
+        <Section
+          title="Mission"
+          className="mt-16 lg:mt-[110px] 2xl:mt-[136px]"
+        />
 
         <div className="mt-8 lg:mt-[110px] 2xl:mt-[136px] flex flex-col gap-5 2xl:gap-0 lg:grid lg:grid-cols-[30%,40%,15%] 2xl:grid-cols-[30%,40%,20%] justify-between">
           <span
@@ -188,342 +164,20 @@ export default function Home() {
       </section>
 
       <section className="mt-16 lg:mt-[110px] 2xl:mt-[136px] container">
-        <div
-          className="flex items-center justify-between gap-4 2xl:gap-8 mt-16 2xl:mt-[136px]"
-          data-aos="fade-up"
-        >
-          <span className="text-[24px] 2xl:text-[32px] text-[#545454] font-medium">
-            Meet Us
-          </span>
-
-          <div className="flex-1 flex items-center">
-            <div className="bg-[#333] h-[1px] lg:h-[2px] w-full"></div>
-          </div>
-
-          <div className="relative w-[180px] lg:w-[360px] pt-[10%] lg:pt-[8%]">
-            <NextImg
-              src="/assets/icon/HorizontalLogo.svg"
-              alt="BannerHeader"
-              objectFit="contain"
-              className="absolute top-0 left-0"
-            />
-          </div>
-
-          <div className="hidden 2xl:flex flex-1 items-center">
-            <div className="bg-[#333] h-[1px] 2xl:h-[2px] w-full"></div>
-          </div>
-
-          <span className="hidden 2xl:block text-[32px] -tracking-[1px] text-[#545454] leading-[140%]">
-            © 2024
-          </span>
-        </div>
+        <Section
+          title="Meet Us"
+        />
         <SlideUser/>
       </section>
       <section className="mt-[68px] 2xl:mt-[108px] container">
-        <div
-          className="flex items-center justify-between gap-4 2xl:gap-8 mt-16 2xl:mt-[136px]"
-          data-aos="fade-up"
-        >
-          <span className="text-[24px] 2xl:text-[32px] text-[#545454] font-medium">
-            Our Work
-          </span>
+        <Section title="Our Work" />
 
-          <div className="flex-1 flex items-center">
-            <div className="bg-[#333] h-[1px] lg:h-[2px] w-full"></div>
-          </div>
+        {/* SLide2 */}
+        <Slide2/>
 
-          <div className="relative w-[180px] lg:w-[360px] pt-[10%] lg:pt-[8%]">
-            <NextImg
-              src="/assets/icon/HorizontalLogo.svg"
-              alt="BannerHeader"
-              objectFit="contain"
-              className="absolute top-0 left-0"
-            />
-          </div>
-
-          <div className="hidden 2xl:flex flex-1 items-center">
-            <div className="bg-[#333] h-[1px] 2xl:h-[2px] w-full"></div>
-          </div>
-
-          <span className="hidden 2xl:block text-[32px] -tracking-[1px] text-[#545454] leading-[140%]">
-            © 2024
-          </span>
-        </div>
-
-        <div className="grid lg:grid-cols-2 items-center mt-[68px] lg:mt-[110px] 2xl:mt-[150px]">
-          <div data-aos="fade-up">
-            <p className="text-[36px] lg:text-[44px] 2xl:text-[64px] leading-[44px] lg:leading-[64px] -tracking-[1.92px]">
-              Real <span className="font-bold">Solutions</span>, <br />
-              Real
-              <span className="font-bold"> Results</span>
-            </p>
-          </div>
-          <div className="lg:flex flex-col gap-10 items-end hidden">
-            <p className="flex flex-col gap-[15px]" data-aos="fade-up">
-              <span className="text-[32px] -tracking-[0.96px] leading-[32px] text-[#545454]">
-                &#47;&#47; Farmers by Heart
-              </span>
-              <span className="text-[32px] font-medium leading-[32px] -tracking-[0.96px] text-[#333] pl-[109px]">
-                Stewards by Choise.
-              </span>
-            </p>
-            <p
-              className="text-2xl -tracking-[0.72px]  leading-[180%] text-right w-[90%] text-[#545454]"
-              data-aos="fade-up"
-            >
-              In the ever-evoling landscape of agriculture, sustainable farming
-              practice have become a cornerstone for ensuring long-term
-              environmental health and the vitality of our framing communities
-            </p>
-          </div>
-        </div>
-
-        {/* Slide 2 */}
-        <div className="mt-[50px] lg:mt-[70px] lg:block hidden">
-          <div className="grid lg:grid-cols-[65%,35%] 2xl:grid-cols-2 gap-5">
-            <div
-              className="relative w-full h-[598px] rounded-lg"
-              data-aos="fade-up"
-            >
-              <NextImg
-                src="/assets/image/Rectangle 167.png"
-                alt="Village-agriculture"
-                objectFit="cover"
-                className="rounded-lg"
-              />
-            </div>
-            <div className="flex flex-col gap-[90px]">
-              <div
-                className="grid 2xl:grid-cols-2 items-center gap-3"
-                data-aos="fade-up"
-              >
-                <div className="relative w-full h-[290px] rounded-lg">
-                  <NextImg
-                    src="/assets/image/Rectangle 168.png"
-                    alt="Village-agriculture"
-                    objectFit="cover"
-                    className="rounded-lg"
-                  />
-                </div>
-                <div className="relative w-full h-[290px] rounded-lg lg:hidden 2xl:block block">
-                  <NextImg
-                    src="/assets/image/Rectangle 169.png"
-                    alt="Village-agriculture"
-                    objectFit="cover"
-                    className="rounded-lg"
-                  />
-                </div>
-              </div>
-              <div
-                className="flex flex-row justify-between ml-[30%] lg:hidden 2xl:flex"
-                data-aos="fade-up"
-              >
-                <span className="text-[32px] -tracking-[0.96px] text-[#333] leading-[32px]">
-                  Prev
-                </span>
-                <div className="bg-[#D9D9D9] w-[148px] h-[10px] place-self-end mb-2"></div>
-                <div className="flex items-center gap-3 place-self-end">
-                  <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">
-                    01
-                  </span>
-                  <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">
-                    02
-                  </span>
-                  <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">
-                    03
-                  </span>
-                  <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">
-                    04
-                  </span>
-                </div>
-                <span className="text-[32px] -tracking-[0.96px] text-[#333] leading-[32px]">
-                  Next
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            className="lg:flex justify-between hidden mx-auto w-[55%] mt-[60px] 2xl:hidden"
-            data-aos="fade-up"
-          >
-            <span className="text-[32px] -tracking-[0.96px] text-[#333] leading-[32px]">
-              Prev
-            </span>
-            <div className="bg-[#D9D9D9] w-[148px] h-[10px] place-self-end mb-2"></div>
-            <div className="flex items-center gap-3 place-self-end">
-              <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">
-                01
-              </span>
-              <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">
-                02
-              </span>
-              <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">
-                03
-              </span>
-              <span className="text-base font-bold -tracking-[0.48px] text-[#545454] leading-[28px]">
-                04
-              </span>
-            </div>
-            <span className="text-[32px] -tracking-[0.96px] text-[#333] leading-[32px]">
-              Next
-            </span>
-          </div>
-          <div
-            className="grid lg:grid-cols-2 justify-between lg:mt-[70px] 2xl:mt-0"
-            data-aos="fade-up"
-          >
-            <div className="flex items-center 2xl:flex justify-between lg:grid lg:grid-cols-2 lg:gap-[50px]">
-              <div className="flex flex-col gap-1 place-self-end lg:place-self-auto">
-                <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
-                  Year
-                </span>
-                <span className="text-base font-bold -tracking-[0.48px] text-[#545454]">
-                  &#47;&#47; 2024
-                </span>
-              </div>
-              <div className="flex flex-col gap-1 place-self-end lg:place-self-auto">
-                <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
-                  Category
-                </span>
-                <span className="text-base font-bold -tracking-[0.48px] text-[#545454]">
-                  &#47;&#47; 2024
-                </span>
-              </div>
-              <div className="flex flex-col gap-1 place-self-end lg:place-self-auto">
-                <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
-                  Company
-                </span>
-                <span className="text-base font-bold -tracking-[0.48px] text-[#545454]">
-                  &#47;&#47; VILLAGE AGRICULTURE
-                </span>
-              </div>
-            </div>
-            <div className="flex flex-col text-right">
-              <span className="text-[64px] -tracking-[1.92px] leading-[64px] text-[#545454]">
-                Portfolio
-              </span>
-              <span className="text-[64px] font-medium -tracking-[1.92px] leading-[64px] text-[#545454]">
-                &#47;&#47; 2024
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* slide 2 */}
-        <div className="mt-[50px] lg:hidden block">
-          <div className="flex flex-col gap-8">
-            <div
-              className="relative w-full h-[598px] rounded-lg"
-              data-aos="fade-up"
-            >
-              <NextImg
-                src="/assets/image/Rectangle 167.png"
-                alt="Village-agriculture"
-                objectFit="cover"
-                className="rounded-lg"
-              />
-            </div>
-            <p
-              className="text-[#16px] 2xl:text-2xl -tracking-[0.72px]  leading-[180%] text-right text-[#545454]"
-              data-aos="fade-up"
-            >
-              In the ever-evoling landscape of agriculture, sustainable farming
-              practice have become a cornerstone for ensuring long-term
-              environmental health and the vitality of our framing communities
-            </p>
-          </div>
-          <div className="flex flex-col mt-[53px]">
-            <div
-              className="relative w-full h-[290px] rounded-lg"
-              data-aos="fade-up"
-            >
-              <NextImg
-                src="/assets/image/Rectangle 168.png"
-                alt="Village-agriculture"
-                objectFit="cover"
-                className="rounded-lg"
-              />
-            </div>
-            <div
-              className="flex items-center gap-[55px] mt-3"
-              data-aos="fade-up"
-            >
-              <div className="flex flex-col gap-1">
-                <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
-                  Year
-                </span>
-                <span className="text-base font-bold -tracking-[0.48px] text-[#545454]">
-                  &#47;&#47; 2024
-                </span>
-              </div>
-              <div className="flex flex-col gap-1">
-                <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
-                  Category
-                </span>
-                <span className="text-base font-bold -tracking-[0.48px] text-[#545454]">
-                  &#47;&#47; 2024
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col mt-[53px]">
-            <div
-              className="relative w-full h-[290px] rounded-lg"
-              data-aos="fade-up"
-            >
-              <NextImg
-                src="/assets/image/Rectangle 169.png"
-                alt="Village-agriculture"
-                objectFit="cover"
-                className="rounded-lg"
-              />
-            </div>
-            <div
-              className="flex items-center gap-[55px] mt-3"
-              data-aos="fade-up"
-            >
-              <div className="flex flex-col gap-1">
-                <span className="text-base font-medium -tracking-[0.48px] text-[#545454]">
-                  Company
-                </span>
-                <span className="text-base font-bold -tracking-[0.48px] text-[#545454]">
-                  &#47;&#47; VILLAGE AGRICULTURE
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
       <section className="container mt-16 lg:mt-[120px]">
-        <div
-          className="flex items-center justify-between gap-4 2xl:gap-8"
-          data-aos="fade-up"
-        >
-          <span className="text-[24px] 2xl:text-[32px] text-[#545454] font-medium">
-            Blog
-          </span>
-
-          <div className="flex-1 flex items-center">
-            <div className="bg-[#333] h-[1px] lg:h-[2px] w-full"></div>
-          </div>
-
-          <div className="relative w-[180px] lg:w-[360px] pt-[10%] lg:pt-[8%]">
-            <NextImg
-              src="/assets/icon/HorizontalLogo.svg"
-              alt="BannerHeader"
-              objectFit="contain"
-              className="absolute top-0 left-0"
-            />
-          </div>
-
-          <div className="hidden 2xl:flex flex-1 items-center">
-            <div className="bg-[#333] h-[1px] 2xl:h-[2px] w-full"></div>
-          </div>
-
-          <span className="hidden 2xl:block text-[32px] -tracking-[1px] text-[#545454] leading-[140%]">
-            © 2024
-          </span>
-        </div>
+        <Section title="Blog" />
         <div
           className="flex items-center justify-between mt-[50px] lg:mt-[103px]"
           data-aos="fade-up"
@@ -597,35 +251,7 @@ export default function Home() {
       </section>
       <section className="mt-20 lg:mt-[100px] 2xl:mt-[210px] ">
         <div className="container">
-          <div
-            className="flex items-center justify-between gap-4 2xl:gap-8"
-            data-aos="fade-up"
-          >
-            <span className="text-[24px] 2xl:text-[32px] text-[#545454] font-medium">
-              Our Stories
-            </span>
-
-            <div className="flex-1 flex items-center">
-              <div className="bg-[#333] h-[1px] lg:h-[2px] w-full"></div>
-            </div>
-
-            <div className="relative w-[180px] lg:w-[360px] pt-[10%] lg:pt-[8%]">
-              <NextImg
-                src="/assets/icon/HorizontalLogo.svg"
-                alt="BannerHeader"
-                objectFit="contain"
-                className="absolute top-0 left-0"
-              />
-            </div>
-
-            <div className="hidden 2xl:flex flex-1 items-center">
-              <div className="bg-[#333] h-[1px] 2xl:h-[2px] w-full"></div>
-            </div>
-
-            <span className="hidden 2xl:block text-[32px] -tracking-[1px] text-[#545454] leading-[140%]">
-              © 2024
-            </span>
-          </div>
+          <Section title="Our Stories" />
           <div
             className="lg:mt-20 mt-[182px] lg:flex justify-end hidden"
             data-aos="fade-up"
@@ -773,35 +399,7 @@ export default function Home() {
       </section>
       <section className="mt-20 2xl:mt-[117px]">
         <div className="container">
-          <div
-            className="flex items-center justify-between gap-4 2xl:gap-8"
-            data-aos="fade-up"
-          >
-            <span className="text-[24px] 2xl:text-[32px] font-medium text-[#545454]">
-              Sustainability
-            </span>
-
-            <div className="flex-1 flex items-center">
-              <div className="bg-[#333] h-[1px] lg:h-[2px] w-full"></div>
-            </div>
-
-            <div className="relative w-[180px] lg:w-[360px] pt-[10%] lg:pt-[8%]">
-              <NextImg
-                src="/assets/icon/HorizontalLogo.svg"
-                alt="BannerHeader"
-                objectFit="contain"
-                className="absolute top-0 left-0"
-              />
-            </div>
-
-            <div className="hidden 2xl:flex flex-1 items-center">
-              <div className="bg-[#333] h-[1px] 2xl:h-[2px] w-full"></div>
-            </div>
-
-            <span className="hidden 2xl:block text-[32px] -tracking-[1px] text-[#545454] leading-[140%]">
-              © 2024
-            </span>
-          </div>
+          <Section title="Sustainability" />
           <div
             className="mt-[50px] lg:mt-[100px] 2xl:mt-[180px] flex justify-end"
             data-aos="fade-up"
@@ -949,10 +547,7 @@ export default function Home() {
             </span>
           </div>
           <div className="lg:flex lg:justify-between lg:items-center 2xl:mt-0 mt-[50px] lg:mt-[120px]">
-            <div
-              className="flex flex-col 2xl:hidden"
-              data-aos="fade-up"
-            >
+            <div className="flex flex-col 2xl:hidden" data-aos="fade-up">
               <span className="text-base lg:text-[24px] 2xl:text-[32px] -tracking-[0.48px] 2xl:-tracking-[0.96px] leading-[32px] text-[#545454] ml-5">
                 &#47;&#47; Nourishing the Land
               </span>

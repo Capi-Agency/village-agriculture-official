@@ -7,29 +7,53 @@ interface MenuProps {
   isOpen: boolean;
   onClose: () => void;
 }
+interface MenuItem {
+  title: string;
+  submenu: string[];
+}
 
 const Menu = ({ isOpen, onClose }: MenuProps) => {
   const [activeTab, setActiveTab] = useState("");
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const [isWhatWeDoOpen, setIsWhatWeDoOpen] = useState(false);
-  const [isOurBrandsOpen, setIsOurBrandsOpen] = useState(false);
-  const [isOurImpactOpen, setIsOurImpactOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
-  const toggleAboutMenu = () => {
-    setIsAboutOpen((prev) => !prev);
+  const toggleMenu = (menuName: string) => {
+    setOpenMenu(openMenu === menuName ? null : menuName);
+    setOpenSubmenu(null);
   };
 
-  const toggleWhatWeDoMenu = () => {
-    setIsWhatWeDoOpen((prev) => !prev);
+  const toggleSubmenu = (submenuName: string) => {
+    setOpenSubmenu(openSubmenu === submenuName ? null : submenuName);
   };
+  const menuData: MenuItem[] = [
+    {
+      title: "About Us",
+      submenu: [
+        "Who We Are",
+        "Our Story",
+        "Our Vision & Our Mission",
+        "Our Dream & Our Belief",
+        "Our Amazing Food Factory",
+      ],
+    },
+    {
+      title: "What We Do",
+      submenu: ["Our Operation", "Our Products", "Our Food Factory"],
+    },
+    {
+      title: "Our Brand",
+      submenu: ["Brand 1", "Brand 2", "Brand 3"],
+    },
+    {
+      title: "Our Impact",
+      submenu: [
+        "Tree Planting Project",
+        "Education Projects",
+        "Community Engagement",
+      ],
+    },
+  ];
 
-  const toggleOurBrandsMenu = () => {
-    setIsOurBrandsOpen((prev) => !prev);
-  };
-
-  const toggleOurImpactMenu = () => {
-    setIsOurImpactOpen((prev) => !prev);
-  };
   return (
     <div
       className={`fixed top-0 left-0 w-full h-full bg-white z-50 transition-transform duration-500 ease-in-out overflow-hidden ${
@@ -300,7 +324,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
               value="tab4"
               className="tab-content flex flex-col justify-between"
             >
-              <ul className="flex flex-col gap-8 2xl:w-full lg:w-[262px]" data-aos="fade-up">
+              <ul
+                className="flex flex-col gap-8 2xl:w-full lg:w-[262px]"
+                data-aos="fade-up"
+              >
                 <li className="text-[#000] text-2xl font-medium -tracking-[0.72px] leading-[24px] cursor-pointer">
                   Tree Planting Project
                 </li>
@@ -358,120 +385,33 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           </button>
         </div>
         <div className="flex flex-col gap-10 mt-10">
-          <div>
-            <div
-              className="text-[#898989] text-2xl font-medium -tracking-[0.72px] cursor-pointer"
-              onClick={toggleAboutMenu}
-            >
-              About Us
+          {menuData.map((menu, index) => (
+            <div key={index}>
+              <div
+                className={`text-[#898989] text-2xl font-medium -tracking-[0.72px] cursor-pointer ${
+                  openMenu === menu.title ? "text-black font-bold" : ""
+                }`}
+                onClick={() => toggleMenu(menu.title)}
+              >
+                {menu.title}
+              </div>
+              {openMenu === menu.title && (
+                <ul className="flex flex-col gap-8 mt-8">
+                  {menu.submenu.map((item, subIndex) => (
+                    <li
+                      key={subIndex}
+                      className={`text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer ${
+                        openSubmenu === item ? "text-black font-bold" : ""
+                      }`}
+                      onClick={() => toggleSubmenu(item)}
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
-            {isAboutOpen && (
-              <ul className="flex flex-col gap-8 mt-8">
-                <li className="text-[#000] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Who We Are
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Our Story
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Our Vision & Our Mission
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Our Dream & Our Belief
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Our Vision & Our Mission
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Our Name
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Our Amazing Food Factory
-                </li>
-              </ul>
-            )}
-          </div>
-          <div>
-            <div
-              className="text-[#898989] text-2xl font-medium -tracking-[0.72px] cursor-pointer"
-              onClick={toggleWhatWeDoMenu}
-            >
-              What We Do
-            </div>
-            {isWhatWeDoOpen && (
-              <ul className="flex flex-col gap-8 mt-8">
-                <li className="text-[#000] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Our Operation
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Our Products
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Our Food Factory
-                </li>
-              </ul>
-            )}
-          </div>
-          <div>
-            <div
-              className="text-[#898989] text-2xl font-medium -tracking-[0.72px] cursor-pointer"
-              onClick={toggleOurBrandsMenu}
-            >
-              Our Brand
-            </div>
-            {isOurBrandsOpen && (
-              <ul className="flex flex-col gap-8 mt-8">
-                <li className="text-[#000] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Lorem Ipsum
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Lorem Ipsum
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Lorem Ipsum
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Lorem Ipsum
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Lorem Ipsum
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Lorem Ipsum
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Lorem Ipsum
-                </li>
-              </ul>
-            )}
-          </div>
-          <div>
-            <div
-              className="text-[#898989] text-2xl font-medium -tracking-[0.72px] cursor-pointer"
-              onClick={toggleOurImpactMenu}
-            >
-              Our Impact
-            </div>
-            {isOurImpactOpen && (
-              <ul className="flex flex-col gap-8 mt-8">
-                <li className="text-[#000] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Tree Planting Project
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Education Projects
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Community Engagment
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  House of Food Campus - Project
-                </li>
-                <li className="text-[#898989] text-base font-medium -tracking-[0.48px] leading-[24px] cursor-pointer">
-                  Our Vision & Our Mission
-                </li>
-              </ul>
-            )}
-          </div>
+          ))}
         </div>
       </div>
     </div>
