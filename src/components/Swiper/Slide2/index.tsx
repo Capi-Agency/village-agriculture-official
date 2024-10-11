@@ -28,7 +28,7 @@ const slides = [
     description: "// 2024",
   },
   {
-    src: "/assets/image/sl2-img3.jpg",
+    src: "/assets/image/sl2-img1.jpg",
     alt: "Village-agriculture",
     title: "Company",
     description: "// VILLAGE AGRICULTURE",
@@ -57,7 +57,7 @@ export default function App() {
 
   return (
     <>
-      {/* lg, 2xl */}
+      {/* 2xl */}
       <div className="lg:block hidden">
         <div className="grid lg:grid-cols-2 items-center mt-[68px] lg:mt-[110px] 2xl:mt-[150px]">
           <div data-aos="fade-up">
@@ -161,6 +161,12 @@ export default function App() {
                   if (mainSwiper) {
                     mainSwiper.slidePrev();
                     updateProgressBar(mainSwiper); // Cập nhật thanh tiến trình
+                    
+                    // Cập nhật thumbnail
+                    const newIndex = mainSwiper.activeIndex;
+                    if (thumbsSwiper) {
+                      thumbsSwiper.slideTo(newIndex); // Chuyển đến thumbnail tương ứng
+                    }
                   }
                 }}
               >
@@ -194,6 +200,12 @@ export default function App() {
                   if (mainSwiper) {
                     mainSwiper.slideNext();
                     updateProgressBar(mainSwiper); // Cập nhật thanh tiến trình
+                    
+                    // Cập nhật thumbnail
+                    const newIndex = mainSwiper.activeIndex;
+                    if (thumbsSwiper) {
+                      thumbsSwiper.slideTo(newIndex); // Chuyển đến thumbnail tương ứng
+                    }
                   }
                 }}
               >
@@ -202,6 +214,7 @@ export default function App() {
             </div>
           </div>
         </div>
+        {/* lg */}
         <div
           className="lg:flex justify-between hidden mx-auto w-[55%] mt-[60px] 2xl:hidden"
           data-aos="fade-up"
@@ -212,6 +225,12 @@ export default function App() {
               if (mainSwiper) {
                 mainSwiper.slidePrev();
                 updateProgressBar(mainSwiper); // Cập nhật thanh tiến trình
+                
+                // Cập nhật thumbnail
+                const newIndex = mainSwiper.activeIndex;
+                if (thumbsSwiper) {
+                  thumbsSwiper.slideTo(newIndex); 
+                }
               }
             }}
           >
@@ -219,7 +238,7 @@ export default function App() {
           </div>
           <div className="bg-[#D9D9D9] w-[148px] h-[10px] place-self-end mb-2">
             <div
-              id="progress-bar"
+              id="progress-bar-lg"
               className="w-0 h-full bg-[#545454] transition ease-in duration-300"
             ></div>
           </div>
@@ -245,6 +264,12 @@ export default function App() {
               if (mainSwiper) {
                 mainSwiper.slideNext();
                 updateProgressBar(mainSwiper); // Cập nhật thanh tiến trình
+                
+                // Cập nhật thumbnail
+                const newIndex = mainSwiper.activeIndex;
+                if (thumbsSwiper) {
+                  thumbsSwiper.slideTo(newIndex); // Chuyển đến thumbnail tương ứng
+                }
               }
             }}
           >
