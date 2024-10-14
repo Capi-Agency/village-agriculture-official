@@ -28,7 +28,7 @@ const slides = [
     description: "// 2024",
   },
   {
-    src: "/assets/image/sl2-img1.jpg",
+    src: "/assets/image/Rectangle 162.png",
     alt: "Village-agriculture",
     title: "Company",
     description: "// VILLAGE AGRICULTURE",
