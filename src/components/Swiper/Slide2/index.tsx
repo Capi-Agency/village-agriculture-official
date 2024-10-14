@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
@@ -55,6 +55,17 @@ export default function App() {
     progressBar.style.width = `${percentage}%`;
   };
 
+  useEffect(() => {
+    if (mainSwiper && thumbsSwiper) {
+      // Đặt thumbnail để không trùng với slide lớn
+      if (mainSwiper.activeIndex === 0) {
+        thumbsSwiper.slideTo(1); // Bắt đầu từ ảnh thứ hai
+      } else {
+        thumbsSwiper.slideTo(mainSwiper.activeIndex + 1); // Chuyển đến ảnh sau
+      }
+    }
+  }, [mainSwiper, thumbsSwiper]);
+
   return (
     <>
       {/* 2xl */}
@@ -99,10 +110,23 @@ export default function App() {
               }}
               onSwiper={(swiper) => {
                 setMainSwiper(swiper);
-                updateProgressBar(swiper); // Cập nhật thanh tiến trình khi khởi tạo
+                updateProgressBar(swiper);
+                if (thumbsSwiper) {
+                  thumbsSwiper.slideTo(1);
+                }
               }}
               onSlideChange={(swiper) => {
-                updateProgressBar(swiper); // Cập nhật thanh tiến trình khi slide thay đổi
+                updateProgressBar(swiper);
+
+                // Cập nhật thumbnail dựa trên slide hiện tại
+                if (thumbsSwiper) {
+                  const nextThumbnailIndex =
+                    swiper.activeIndex + 1 < slides.length
+                      ? swiper.activeIndex + 1
+                      : swiper.activeIndex;
+
+                  thumbsSwiper.slideTo(nextThumbnailIndex);
+                }
               }}
             >
               {slides.map((image, index) => (
@@ -161,11 +185,14 @@ export default function App() {
                   if (mainSwiper) {
                     mainSwiper.slidePrev();
                     updateProgressBar(mainSwiper); // Cập nhật thanh tiến trình
-                    
+
                     // Cập nhật thumbnail
-                    const newIndex = mainSwiper.activeIndex;
                     if (thumbsSwiper) {
-                      thumbsSwiper.slideTo(newIndex); // Chuyển đến thumbnail tương ứng
+                      const newIndex =
+                        mainSwiper.activeIndex > 0 ? mainSwiper.activeIndex : 0; // Đảm bảo không vượt quá giới hạn
+                      thumbsSwiper.slideTo(
+                        newIndex + 1 < slides.length ? newIndex + 1 : newIndex
+                      ); // Chuyển đến thumbnail tương ứng
                     }
                   }
                 }}
@@ -200,10 +227,13 @@ export default function App() {
                   if (mainSwiper) {
                     mainSwiper.slideNext();
                     updateProgressBar(mainSwiper); // Cập nhật thanh tiến trình
-                    
+
                     // Cập nhật thumbnail
-                    const newIndex = mainSwiper.activeIndex;
                     if (thumbsSwiper) {
+                      const newIndex =
+                        mainSwiper.activeIndex + 1 < slides.length
+                          ? mainSwiper.activeIndex + 1
+                          : mainSwiper.activeIndex;
                       thumbsSwiper.slideTo(newIndex); // Chuyển đến thumbnail tương ứng
                     }
                   }
@@ -225,11 +255,14 @@ export default function App() {
               if (mainSwiper) {
                 mainSwiper.slidePrev();
                 updateProgressBar(mainSwiper); // Cập nhật thanh tiến trình
-                
+
                 // Cập nhật thumbnail
-                const newIndex = mainSwiper.activeIndex;
                 if (thumbsSwiper) {
-                  thumbsSwiper.slideTo(newIndex); 
+                  const newIndex =
+                    mainSwiper.activeIndex > 0 ? mainSwiper.activeIndex : 0; // Đảm bảo không vượt quá giới hạn
+                  thumbsSwiper.slideTo(
+                    newIndex + 1 < slides.length ? newIndex + 1 : newIndex
+                  ); // Chuyển đến thumbnail tương ứng
                 }
               }
             }}
@@ -264,10 +297,13 @@ export default function App() {
               if (mainSwiper) {
                 mainSwiper.slideNext();
                 updateProgressBar(mainSwiper); // Cập nhật thanh tiến trình
-                
+
                 // Cập nhật thumbnail
-                const newIndex = mainSwiper.activeIndex;
                 if (thumbsSwiper) {
+                  const newIndex =
+                    mainSwiper.activeIndex + 1 < slides.length
+                      ? mainSwiper.activeIndex + 1
+                      : mainSwiper.activeIndex;
                   thumbsSwiper.slideTo(newIndex); // Chuyển đến thumbnail tương ứng
                 }
               }
@@ -316,7 +352,7 @@ export default function App() {
           <p className="text-[36px] lg:text-[44px] 2xl:text-[64px] leading-[44px] lg:leading-[64px] -tracking-[1.92px]">
             Real <span className="font-bold">Solutions</span>, <br />
             Real
-            <span className="font-bold"> Results</span>
+            <span className="font-bold">Results</span>
           </p>
         </div>
 
@@ -324,9 +360,8 @@ export default function App() {
           {slides.map((slide, index) => {
             if (index === 0) {
               return (
-                <>
+                <div key={index}>
                   <div
-                    key={index}
                     className="relative w-full h-[598px] rounded-lg"
                     data-aos="fade-up"
                   >
@@ -343,18 +378,17 @@ export default function App() {
                   >
                     {slide.description}
                   </p>
-                </>
+                </div>
               );
             }
-            return null; 
+            return null;
           })}
         </div>
 
         <div className="flex flex-col">
           {slides.slice(1).map((slide, index) => (
-            <>
+            <div key={index}>
               <div
-                key={index}
                 className="relative w-full h-[290px] rounded-lg mt-10"
                 data-aos="fade-up"
               >
@@ -378,7 +412,7 @@ export default function App() {
                   </span>
                 </div>
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>
